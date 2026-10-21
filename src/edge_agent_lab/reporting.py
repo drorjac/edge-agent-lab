@@ -209,7 +209,7 @@ def _plots(rows, tests, telemetry, output):
             for _, r in subset
         ]
         fig, ax = plt.subplots(figsize=(9, 6), layout="constrained")
-        im = ax.imshow(values, vmin=0, vmax=1, cmap="YlGnBu")
+        im = ax.imshow(values, vmin=0, vmax=1, cmap="YlGnBu", aspect="auto")
         ax.set_xticks(range(5), ["clean", "noise", "gain", "gyro outage", "rotation"])
         ax.set_yticks(range(len(subset)), [n.split("/")[1] for n, _ in subset])
         for i, row in enumerate(values):
