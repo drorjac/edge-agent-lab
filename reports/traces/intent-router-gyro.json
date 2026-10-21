@@ -1,0 +1,295 @@
+{
+  "run_id": "f15487affc2c47d2b3599471ddaba07a",
+  "task": "Investigate missing gyroscope sensor outage",
+  "planner": "local_llm_intent_router",
+  "status": "complete",
+  "steps": 5,
+  "elapsed_seconds": 0.6434522079944145,
+  "citations": [
+    "drift",
+    "missing-sensor",
+    "provenance"
+  ],
+  "findings": [
+    "constant_channels"
+  ],
+  "errors": [],
+  "trace": [
+    {
+      "action": {
+        "tool": "catalog",
+        "query": "",
+        "split": "train",
+        "corruption": "noise",
+        "reason": "Resolve pinned dataset identity"
+      },
+      "observation": {
+        "dataset": "UCI HAR",
+        "doi": "10.24432/C54S4K",
+        "url": "https://archive.ics.uci.edu/static/public/240/human+activity+recognition+using+smartphones.zip",
+        "license": "CC BY 4.0",
+        "archive_sha256": "c00b803081a5c797cd5e4b83700a9810b38d53d9d84e01917e090e1fdbc81031",
+        "channels": [
+          "body_acc_x",
+          "body_acc_y",
+          "body_acc_z",
+          "body_gyro_x",
+          "body_gyro_y",
+          "body_gyro_z",
+          "total_acc_x",
+          "total_acc_y",
+          "total_acc_z"
+        ],
+        "sample_rate_hz": 50,
+        "window_samples": 128,
+        "labels": [
+          "walking",
+          "walking_upstairs",
+          "walking_downstairs",
+          "sitting",
+          "standing",
+          "laying"
+        ],
+        "split_policy": "subject-disjoint; official test unchanged",
+        "splits": {
+          "train": {
+            "rows": 5970,
+            "subjects": [
+              1,
+              3,
+              6,
+              7,
+              8,
+              11,
+              14,
+              16,
+              17,
+              21,
+              22,
+              23,
+              25,
+              27,
+              28,
+              29,
+              30
+            ],
+            "class_counts": [
+              1005,
+              883,
+              808,
+              1032,
+              1118,
+              1124
+            ],
+            "sha256": "2f22ed624e612dfaf775ef1aac4edba305eb66815ed98a0b2a907cf4bdaa7871"
+          },
+          "test": {
+            "rows": 2947,
+            "subjects": [
+              2,
+              4,
+              9,
+              10,
+              12,
+              13,
+              18,
+              20,
+              24
+            ],
+            "class_counts": [
+              496,
+              471,
+              420,
+              491,
+              532,
+              537
+            ],
+            "sha256": "3976952208a7fb2dba5f11c7ad11af7b7aae855a281994567f369384997e2956"
+          },
+          "val": {
+            "rows": 1382,
+            "subjects": [
+              5,
+              15,
+              19,
+              26
+            ],
+            "class_counts": [
+              221,
+              190,
+              178,
+              254,
+              256,
+              283
+            ],
+            "sha256": "3ede37483af70f0144df9751e8eb230f5ffa1d2f74d3dda3c45071497baf946e"
+          }
+        }
+      },
+      "duration_ms": 0.0007080088835209608,
+      "planner_usage": {
+        "prompt_tokens": 152,
+        "completion_tokens": 7,
+        "total_tokens": 159
+      }
+    },
+    {
+      "action": {
+        "tool": "retrieve",
+        "query": "Investigate missing gyroscope sensor outage",
+        "split": "train",
+        "corruption": "noise",
+        "reason": "Retrieve task-grounded evidence"
+      },
+      "observation": {
+        "evidence": [
+          {
+            "id": "missing-sensor",
+            "title": "Missing gyroscope incident response",
+            "text": "A gyroscope outage affects body_gyro channels 3 4 5. Audit missing values and near-zero channel variance. Simulate gyro_dropout; compare validation accuracy before promotion. Do not silently impute a sensor and label the result healthy.",
+            "score": 0.03278688524590164
+          },
+          {
+            "id": "provenance",
+            "title": "Dataset provenance and attribution",
+            "text": "UCI HAR DOI 10.24432/C54S4K. License CC BY 4.0. Credit Anguita Ghio Oneto Parra and Reyes-Ortiz. Store source URL and SHA256 checksums. Real smartphone accelerometer and gyroscope recordings contain six activities.",
+            "score": 0.03200204813108039
+          },
+          {
+            "id": "drift",
+            "title": "Sensor drift investigation",
+            "text": "Compare incoming channel means variances and missingness against training reference statistics. Unlabeled drift is a warning not proof of accuracy loss. Obtain labeled validation data and evaluate gain noise and rotation sensitivity.",
+            "score": 0.03200204813108039
+          }
+        ]
+      },
+      "duration_ms": 0.585832996875979,
+      "planner_usage": {}
+    },
+    {
+      "action": {
+        "tool": "audit",
+        "query": "",
+        "split": "train",
+        "corruption": "noise",
+        "reason": "Audit actual training data"
+      },
+      "observation": {
+        "healthy": true,
+        "issues": [],
+        "rows": 5970,
+        "nonfinite_count": 0,
+        "constant_channels": [],
+        "drift_channels": [],
+        "channel_means": [
+          -0.0006485229241661727,
+          -0.00042298456537537277,
+          -0.00012193433940410614,
+          0.0009447571355849504,
+          -0.0008253047126345336,
+          -0.00018543617625255138,
+          0.8128839135169983,
+          0.006927064619958401,
+          0.07250810414552689
+        ],
+        "channel_stds": [
+          0.18898341059684753,
+          0.12133996188640594,
+          0.11081936210393906,
+          0.39884060621261597,
+          0.39110589027404785,
+          0.25913795828819275,
+          0.3997649848461151,
+          0.3755990266799927,
+          0.37438860535621643
+        ],
+        "class_counts": [
+          1005,
+          883,
+          808,
+          1032,
+          1118,
+          1124
+        ],
+        "subject_leakage": false
+      },
+      "duration_ms": 129.14087499666493,
+      "planner_usage": {}
+    },
+    {
+      "action": {
+        "tool": "simulate_shift",
+        "query": "",
+        "split": "val",
+        "corruption": "gyro_dropout",
+        "reason": "Local model classified requested incident: gyro_dropout"
+      },
+      "observation": {
+        "source": "synthetic corruption of real data",
+        "kind": "gyro_dropout",
+        "audit": {
+          "healthy": false,
+          "issues": [
+            "constant_channels"
+          ],
+          "rows": 1382,
+          "nonfinite_count": 0,
+          "constant_channels": [
+            3,
+            4,
+            5
+          ],
+          "drift_channels": [],
+          "channel_means": [
+            -0.0005835232441313565,
+            0.000272250734269619,
+            -0.0009378091199323535,
+            0.0,
+            0.0,
+            0.0,
+            0.7696064114570618,
+            0.12305045127868652,
+            0.14693216979503632
+          ],
+          "channel_stds": [
+            0.21837218105793,
+            0.1270168423652649,
+            0.08784531056880951,
+            0.0,
+            0.0,
+            0.0,
+            0.46947720646858215,
+            0.43921980261802673,
+            0.2663373351097107
+          ],
+          "class_counts": [
+            221,
+            190,
+            178,
+            254,
+            256,
+            283
+          ]
+        }
+      },
+      "duration_ms": 22.15950000390876,
+      "planner_usage": {}
+    },
+    {
+      "action": {
+        "tool": "finish",
+        "query": "",
+        "split": "train",
+        "corruption": "noise",
+        "reason": "Required evidence and requested incident complete"
+      },
+      "observation": {
+        "status": "complete"
+      },
+      "duration_ms": 0.0005409965524449944,
+      "planner_usage": {}
+    }
+  ],
+  "summary": "Dataset evidence and audit collected. Investigate: constant_channels",
+  "limits": "Audits and synthetic incidents do not establish production accuracy."
+}

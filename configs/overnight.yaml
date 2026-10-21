@@ -1,0 +1,6 @@
+# CPU-bounded full study; checkpoints make reruns resumable.
+seeds: [7, 23, 42]
+epochs: 40
+extended: true
+data_root: data/har
+output: artifacts/edge

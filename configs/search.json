@@ -1,0 +1,1 @@
+{"min_macro_f1":0.90,"max_p95_ms":2.0,"max_bytes":32000,"min_dropout_f1":0.75,"max_trials":3,"max_seconds":900}

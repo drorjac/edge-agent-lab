@@ -1,0 +1,103 @@
+{
+  "dataset": "UCI HAR",
+  "doi": "10.24432/C54S4K",
+  "url": "https://archive.ics.uci.edu/static/public/240/human+activity+recognition+using+smartphones.zip",
+  "license": "CC BY 4.0",
+  "archive_sha256": "c00b803081a5c797cd5e4b83700a9810b38d53d9d84e01917e090e1fdbc81031",
+  "channels": [
+    "body_acc_x",
+    "body_acc_y",
+    "body_acc_z",
+    "body_gyro_x",
+    "body_gyro_y",
+    "body_gyro_z",
+    "total_acc_x",
+    "total_acc_y",
+    "total_acc_z"
+  ],
+  "sample_rate_hz": 50,
+  "window_samples": 128,
+  "labels": [
+    "walking",
+    "walking_upstairs",
+    "walking_downstairs",
+    "sitting",
+    "standing",
+    "laying"
+  ],
+  "split_policy": "subject-disjoint; official test unchanged",
+  "splits": {
+    "train": {
+      "rows": 5970,
+      "subjects": [
+        1,
+        3,
+        6,
+        7,
+        8,
+        11,
+        14,
+        16,
+        17,
+        21,
+        22,
+        23,
+        25,
+        27,
+        28,
+        29,
+        30
+      ],
+      "class_counts": [
+        1005,
+        883,
+        808,
+        1032,
+        1118,
+        1124
+      ],
+      "sha256": "2f22ed624e612dfaf775ef1aac4edba305eb66815ed98a0b2a907cf4bdaa7871"
+    },
+    "test": {
+      "rows": 2947,
+      "subjects": [
+        2,
+        4,
+        9,
+        10,
+        12,
+        13,
+        18,
+        20,
+        24
+      ],
+      "class_counts": [
+        496,
+        471,
+        420,
+        491,
+        532,
+        537
+      ],
+      "sha256": "3976952208a7fb2dba5f11c7ad11af7b7aae855a281994567f369384997e2956"
+    },
+    "val": {
+      "rows": 1382,
+      "subjects": [
+        5,
+        15,
+        19,
+        26
+      ],
+      "class_counts": [
+        221,
+        190,
+        178,
+        254,
+        256,
+        283
+      ],
+      "sha256": "3ede37483af70f0144df9751e8eb230f5ffa1d2f74d3dda3c45071497baf946e"
+    }
+  }
+}

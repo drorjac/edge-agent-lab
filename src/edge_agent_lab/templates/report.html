@@ -1,0 +1,45 @@
+<!doctype html><html lang="en"><meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>Edge Agent Lab · Experiment Observatory</title>
+<style>
+:root{color-scheme:dark;--bg:#101820;--panel:#192630;--muted:#a2b4c2;--ink:#eef5fa;--mint:#47c9ad}
+*{box-sizing:border-box}body{margin:0;background:var(--bg);color:var(--ink);font:15px/1.6 system-ui,sans-serif}
+main{max-width:1200px;margin:auto;padding:48px 28px}header{border-bottom:1px solid #344550;padding-bottom:30px}
+.eyebrow{color:var(--mint);letter-spacing:3px;font-size:12px;font-weight:700}h1{font-size:clamp(32px,5vw,58px);line-height:1.1;letter-spacing:-2px;margin:18px 0}
+p{color:var(--muted);max-width:780px}nav{display:flex;gap:8px;margin:28px 0;flex-wrap:wrap}
+button,select{background:var(--panel);color:var(--ink);border:1px solid #3e535f;border-radius:8px;padding:10px 16px;cursor:pointer;font:inherit}
+button[aria-selected=true]{background:var(--mint);color:#101820;border-color:var(--mint)}button:focus-visible,select:focus-visible{outline:3px solid #7b9ff2;outline-offset:3px}
+.cards{display:grid;grid-template-columns:repeat(auto-fit,minmax(180px,1fr));gap:14px;margin:24px 0}.card{background:var(--panel);padding:22px;border-radius:12px}
+.card strong{overflow-wrap:anywhere;display:block;font-size:29px;letter-spacing:-1px}.card span{color:var(--muted);font-size:13px}.section{display:none}.section.active{display:block}
+.tablewrap{overflow:auto;border:1px solid #344550;border-radius:12px;margin-top:20px}table{width:100%;border-collapse:collapse;white-space:nowrap}
+th,td{text-align:left;padding:12px 15px;border-bottom:1px solid #344550}th{font-size:12px;color:var(--muted);text-transform:uppercase;letter-spacing:1px}tr:hover{background:#223440}
+img{width:100%;border-radius:12px;background:white;margin:18px 0}details{background:var(--panel);border-radius:10px;padding:16px;margin:12px 0}summary{cursor:pointer;font-weight:600}
+pre{white-space:pre-wrap;overflow-wrap:anywhere;font-size:12px;color:#c6d8e5;max-height:500px;overflow:auto}.tag{padding:4px 9px;border-radius:20px;background:#25483e;color:#8ee0c8;font-size:12px}
+.note{border-left:3px solid #e0b36a;padding:10px 18px;background:#222d34}footer{margin-top:48px;color:var(--muted);font-size:12px}a{color:var(--mint)}
+</style><main><header><div class="eyebrow">RESEARCH / SYSTEMS / MEASUREMENTS</div>
+<h1>Edge Agent Lab</h1><p>From measured motion to constrained deployment. Three projects connect sensor fusion, evidence-based data stewardship, and adaptive experiment selection.</p>
+<span class="tag">Offline report · no API keys · actual experiment artifacts</span></header>
+<div class="cards" id="cards"></div>
+<nav role="tablist" aria-label="Project reports"><button role="tab" aria-selected="true" data-tab="edge">01 · Edge Sense</button><button role="tab" aria-selected="false" data-tab="steward">02 · Data Steward</button><button role="tab" aria-selected="false" data-tab="pilot">03 · Edge Pilot</button><button role="tab" aria-selected="false" data-tab="apple">Core ML</button></nav>
+<section id="edge" class="section active" role="tabpanel"><h2>Efficient multimodal activity recognition</h2><p>Train-only normalization, subject-disjoint validation, distillation, partial INT8, and simulation-to-real transfer. Select a metric to sort the measured candidate table.</p>
+<label>Sort by <select id="sort"><option value="val_f1_mean">Validation F1</option><option value="test_f1_mean">Test F1</option><option value="bytes">State size</option><option value="p95_ms_median">CPU p95 latency</option></select></label>
+<div class="tablewrap"><table><thead><tr><th>Candidate</th><th>Seeds</th><th>Val F1</th><th>Test F1</th><th>p95 ms</th><th>KiB</th><th>Outage F1</th></tr></thead><tbody id="models"></tbody></table></div>
+<img src="model_tradeoffs.png" alt="Measured model accuracy and size tradeoffs"><img src="robustness.png" alt="Test macro F1 under clean and synthetic sensor corruptions">
+<p class="note">Development timing can be affected by concurrent training. Test metrics are reporting only. Simulation is an approximate prior; synthetic corruption is not a new measured dataset.</p></section>
+<section id="steward" class="section" role="tabpanel"><h2>Evidence-based data engineering</h2><p>A bounded planner calls typed catalog, retrieval, audit, and sensor simulation tools. Every action and observation is durably logged in SQLite. Policy and optional local LLM results are reported separately.</p><div id="steward-results"></div></section>
+<section id="pilot" class="section" role="tabpanel"><h2>Measured constraint-aware selection</h2><p>Planner → runner → critic. Hard gates cover validation F1, latency, size, and missing-sensor robustness. The controller can decline to select a model.</p><div id="pilot-results"></div><img src="telemetry.png" alt="Validation stream replay with synthetic sensor outage"></section>
+<section id="apple" class="section" role="tabpanel"><h2>Core ML export and runtime parity</h2><p>Export includes normalization. Float and weight-compressed artifacts are benchmarked on the explicitly named local backend. Export alone does not establish Neural Engine placement.</p><div id="apple-results"></div></section>
+<footer>Generated from local saved results. <a href="RESULTS.md">Research notes</a> · <a href="results.json">Machine-readable evidence</a> · <a href="data_manifest.json">Dataset provenance</a></footer></main>
+<script id="evidence" type="application/json">__PAYLOAD__</script><script>
+const data=JSON.parse(document.getElementById('evidence').textContent);
+const esc=s=>String(s).replace(/[&<>"']/g,c=>({'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;',"'":'&#39;'}[c]));
+const fmt=(x,n=3)=>x==null?'pending':Number(x).toFixed(n);
+const cards=[[data.edge.results.length,'Completed training artifacts'],[data.edge.seeds.length,'Independent training seeds'],[fmt(data.steward.task_success_rate*100,0)+'%','Policy golden task success'],[data.pilot.winner?.candidate||'None','Constraint-selected candidate']];
+document.getElementById('cards').innerHTML=cards.map(([v,l])=>`<div class="card"><strong>${esc(v)}</strong><span>${esc(l)}</span></div>`).join('');
+function table(){const key=document.getElementById('sort').value;const asc=['bytes','p95_ms_median'].includes(key);const rows=[...data.aggregates].sort((a,b)=>(a[key]-b[key])*(asc?1:-1));document.getElementById('models').innerHTML=rows.map(r=>`<tr><td>${esc(r.name)}</td><td>${r.seeds}</td><td>${fmt(r.val_f1_mean)}</td><td>${fmt(r.test_f1_mean)}</td><td>${fmt(r.p95_ms_median)}</td><td>${fmt(r.bytes/1024,1)}</td><td>${fmt(r.dropout_f1_mean)}</td></tr>`).join('')};table();document.getElementById('sort').addEventListener('change',table);
+for(const b of document.querySelectorAll('[data-tab]'))b.addEventListener('click',()=>{document.querySelectorAll('[data-tab]').forEach(x=>x.setAttribute('aria-selected',String(x===b)));document.querySelectorAll('.section').forEach(s=>s.classList.toggle('active',s.id===b.dataset.tab))});
+function details(title,value){return `<details><summary>${esc(title)}</summary><pre>${esc(JSON.stringify(value,null,2))}</pre></details>`}
+document.getElementById('steward-results').innerHTML=details('Policy golden evaluation',data.steward)+details('Qwen 1.5B workflow-guarded evaluation',data.local_llm)+details('Qwen 7B workflow-guarded evaluation',data.llm_large)+details('Scoped tool-schema ablation',data.llm_grounded)+details('Semantic intent + deterministic workflow',data.llm_intent)+details('Policy-fixed LLM realization (decisions supplied by policy)',data.llm_policy_guarded)+details('Actual example tool traces',data.agent_examples);
+document.getElementById('pilot-results').innerHTML=details('Objective and promotion decision',data.pilot)+details('On-demand training search',data.search)+details('Shadow telemetry',data.telemetry);
+document.getElementById('apple-results').innerHTML=details('Measured export and parity results',data.apple)+details('Native Swift parity',data.native)+details('Search-selected Core ML export',data.apple_search)+details('Search-selected native parity',data.native_search)+details('Independent real-data transfer probe',data.external);
+</script></html>

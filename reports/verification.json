@@ -1,0 +1,88 @@
+{
+  "environment": {
+    "utc": "2026-10-21T19:19:21.831935+00:00",
+    "python": "3.12.9",
+    "platform": "macOS-13.4-arm64-arm-64bit",
+    "processor": "arm",
+    "torch": "2.2.2",
+    "numpy": "1.26.4",
+    "threads": 8,
+    "backend": "cpu"
+  },
+  "unit_tests_passed": 40,
+  "lint": "passed",
+  "format": "passed",
+  "dependency_lock": "passed",
+  "dashboard_logic": {
+    "passed": true,
+    "candidates": 10,
+    "checks": 6
+  },
+  "native_student_parity": true,
+  "native_search_parity": true,
+  "main_checkpoint_hashes_verified": 30,
+  "pipeline": [
+    {
+      "stage": "training",
+      "status": "passed",
+      "seconds": 2.285807249994832
+    },
+    {
+      "stage": "baselines",
+      "status": "passed",
+      "seconds": 6.033247040992137
+    },
+    {
+      "stage": "steward",
+      "status": "passed",
+      "seconds": 2.5222907089919318
+    },
+    {
+      "stage": "pilot",
+      "status": "passed",
+      "seconds": 3.343100041995058
+    },
+    {
+      "stage": "search",
+      "status": "passed",
+      "seconds": 1.7652124580054078
+    },
+    {
+      "stage": "test",
+      "status": "passed",
+      "seconds": 33.40997333401174
+    },
+    {
+      "stage": "search_test",
+      "status": "passed",
+      "seconds": 2.471783792003407
+    },
+    {
+      "stage": "external",
+      "status": "passed",
+      "seconds": 21.72978204199171
+    },
+    {
+      "stage": "coreml",
+      "status": "passed",
+      "seconds": 3.0185542079998413
+    },
+    {
+      "stage": "reports",
+      "status": "passed",
+      "seconds": 1.3445667079940904
+    },
+    {
+      "stage": "tests",
+      "status": "passed",
+      "seconds": 3.090863791992888
+    },
+    {
+      "stage": "lint",
+      "status": "passed",
+      "seconds": 0.05014841599040665
+    }
+  ],
+  "portable_results_sha256": "b382e4a91a7e8103fa6ab03709309848592cd80b8a4ee3c777e6e82ce588636d",
+  "limits": "Dashboard logic checked in a JS engine; browser rendering was unavailable."
+}
