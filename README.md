@@ -14,7 +14,12 @@ The projects share real smartphone accelerometer and gyroscope recordings, a ver
 
 ## Explore the completed study
 
+- [Portfolio summary notebook](notebooks/00_portfolio_summary.ipynb)
+- [Post-training toolkit notebook](notebooks/04_post_training_toolkit.ipynb): pruning, static/dynamic INT8, QAT, combined compaction + quantization, and deployment checks.
+- Project notebooks: [Edge Sense](notebooks/01_edge_sense.ipynb), [Data Steward](notebooks/02_data_steward.ipynb), [Edge Pilot](notebooks/03_edge_pilot.ipynb)
 - [Measured results and limitations](reports/RESULTS.md)
+- [Pruning comparison](reports/PRUNING.md): magnitude sparsity, physical channel removal, fine-tuning, and repeated CPU/GPU timings; [implementation guide](docs/PRUNING.md).
+- [Quantization comparison](reports/QUANTIZATION.md): actual INT8 convolution/linear coverage, calibration, QAT, archive size, and CPU timing; [implementation guide](docs/POST_TRAINING.md).
 - [Offline experiment dashboard](reports/index.html) — open locally, or serve the repository with `python -m http.server 8000` and visit `/reports/`.
 - [Machine-readable evidence](reports/results.json)
 - [Architecture](docs/ARCHITECTURE.md), [experiment protocol](docs/EXPERIMENTS.md), and [role relevance](docs/ROLE_ALIGNMENT.md)
@@ -45,6 +50,8 @@ python scripts/train_study.py --config configs/overnight.yaml
 ```
 
 Completed candidate directories are reused. `scripts/run_all.py` orchestrates training, agent evaluation, selection, held-out evaluation, optional Core ML export, and reports with a durable stage ledger. See [reproduction instructions](docs/REPRODUCING.md).
+
+For optional GPU inference after training, run `edge-infer --checkpoint artifacts/edge/seed-7/distilled/model.pt --device auto --batch-size 64`. It selects CUDA, Apple MPS, or CPU and compares predictions against CPU. Use `--device cuda` to require NVIDIA hardware and a compatible CUDA-enabled PyTorch installation. See the [notebook guide](notebooks/README.md) for setup and timing details.
 
 ## Run each project
 

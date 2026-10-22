@@ -1,5 +1,7 @@
 # 02 · Data Steward
 
+[Executed summary notebook](../../notebooks/02_data_steward.ipynb)
+
 **A data engineering agent whose decisions can be inspected and evaluated.**
 
 The agent resolves a dataset version, retrieves engineering evidence, audits

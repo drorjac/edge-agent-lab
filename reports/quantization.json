@@ -1,0 +1,3050 @@
+{
+  "environment": {
+    "utc": "2026-10-22T17:36:25.432646+00:00",
+    "python": "3.12.9",
+    "platform": "macOS-13.4-arm64-arm-64bit",
+    "processor": "arm",
+    "torch": "2.2.2",
+    "numpy": "1.26.4",
+    "threads": 4,
+    "backend": "cpu"
+  },
+  "torch_quantization_backend": "qnnpack",
+  "source_checkpoint": "artifacts/edge/seed-7/distilled/model.pt",
+  "source_sha256": "d207e077aa5751f87c518590e3afdc8e680bd71220900ee687217bbe61c1f0ab",
+  "compact_checkpoint": {
+    "path": "artifacts/pruning/channels_50pct/model.pt",
+    "sha256": "7a8bb2589c00fbf45bdcd608ee8e20bf68c1c8dff2ba8760e5ba133c347acf90"
+  },
+  "dataset_sha256": "c00b803081a5c797cd5e4b83700a9810b38d53d9d84e01917e090e1fdbc81031",
+  "seed": 7,
+  "fine_tuning_epochs": 5,
+  "calibration": {
+    "split": "train",
+    "rows": 512,
+    "indices": [
+      4677,
+      1054,
+      1029,
+      1709,
+      4249,
+      1188,
+      3575,
+      781,
+      3310,
+      5241,
+      2025,
+      5485,
+      3112,
+      2825,
+      4068,
+      553,
+      2209,
+      1528,
+      3254,
+      4022,
+      4967,
+      5867,
+      3812,
+      807,
+      5774,
+      4163,
+      119,
+      772,
+      5280,
+      3159,
+      2279,
+      3090,
+      3587,
+      1549,
+      3120,
+      5490,
+      92,
+      2307,
+      3774,
+      2019,
+      1888,
+      5762,
+      1696,
+      3662,
+      2167,
+      4065,
+      3788,
+      4615,
+      1317,
+      1260,
+      4192,
+      4493,
+      1974,
+      2648,
+      2159,
+      3657,
+      4751,
+      3463,
+      3110,
+      2573,
+      1289,
+      4394,
+      3555,
+      3858,
+      4847,
+      4921,
+      283,
+      4048,
+      4454,
+      1030,
+      3994,
+      5534,
+      1215,
+      2385,
+      3522,
+      1007,
+      555,
+      3594,
+      576,
+      4426,
+      4618,
+      1705,
+      178,
+      736,
+      3526,
+      3362,
+      4205,
+      2457,
+      4616,
+      5247,
+      17,
+      1448,
+      298,
+      4974,
+      2926,
+      4640,
+      2017,
+      1875,
+      3828,
+      1102,
+      4011,
+      3387,
+      3373,
+      740,
+      2214,
+      2914,
+      4309,
+      4475,
+      1909,
+      5835,
+      375,
+      302,
+      2796,
+      338,
+      3757,
+      4810,
+      2287,
+      4779,
+      488,
+      3710,
+      2820,
+      3158,
+      1099,
+      2211,
+      3143,
+      3249,
+      867,
+      2891,
+      1904,
+      1283,
+      3229,
+      5356,
+      3016,
+      4501,
+      4142,
+      5191,
+      1436,
+      5222,
+      2086,
+      5390,
+      3719,
+      1234,
+      3851,
+      939,
+      3869,
+      2345,
+      569,
+      872,
+      3835,
+      2500,
+      3160,
+      1588,
+      1610,
+      437,
+      3364,
+      3744,
+      3051,
+      1629,
+      228,
+      345,
+      2851,
+      2868,
+      1041,
+      4916,
+      2237,
+      3988,
+      2897,
+      3043,
+      5340,
+      2909,
+      2440,
+      1103,
+      4386,
+      5654,
+      3751,
+      49,
+      3707,
+      3194,
+      5140,
+      1982,
+      1044,
+      4213,
+      3688,
+      2341,
+      2108,
+      2270,
+      3561,
+      5950,
+      2538,
+      3641,
+      2088,
+      4297,
+      4843,
+      5367,
+      1791,
+      2259,
+      2719,
+      2869,
+      2450,
+      1449,
+      1897,
+      5215,
+      3407,
+      579,
+      4431,
+      2315,
+      37,
+      184,
+      2932,
+      1372,
+      2175,
+      5897,
+      4117,
+      800,
+      5850,
+      4631,
+      4074,
+      1227,
+      5165,
+      3449,
+      4306,
+      4303,
+      2690,
+      5065,
+      4089,
+      5349,
+      5000,
+      1440,
+      4901,
+      1385,
+      3533,
+      1159,
+      4654,
+      3047,
+      258,
+      3837,
+      5586,
+      4662,
+      1301,
+      1574,
+      953,
+      487,
+      980,
+      2040,
+      2103,
+      3718,
+      5159,
+      3070,
+      2569,
+      2438,
+      3465,
+      3056,
+      1714,
+      3173,
+      5336,
+      639,
+      430,
+      1445,
+      4599,
+      4742,
+      233,
+      1241,
+      2296,
+      3097,
+      5199,
+      1467,
+      4133,
+      4924,
+      481,
+      1636,
+      4989,
+      243,
+      2593,
+      5004,
+      307,
+      637,
+      1953,
+      862,
+      2008,
+      1712,
+      1915,
+      948,
+      4128,
+      4891,
+      2792,
+      5432,
+      1751,
+      4267,
+      399,
+      5524,
+      2249,
+      1264,
+      1199,
+      3064,
+      3983,
+      2080,
+      1836,
+      1453,
+      1809,
+      1922,
+      4052,
+      5852,
+      3956,
+      1323,
+      206,
+      5736,
+      5712,
+      5703,
+      3361,
+      5130,
+      3031,
+      344,
+      4836,
+      3805,
+      2659,
+      689,
+      1756,
+      316,
+      2123,
+      2325,
+      495,
+      1210,
+      58,
+      2585,
+      3749,
+      4762,
+      3059,
+      85,
+      3698,
+      5555,
+      370,
+      2761,
+      5891,
+      5478,
+      1834,
+      596,
+      1390,
+      3320,
+      455,
+      2037,
+      19,
+      112,
+      2582,
+      4480,
+      15,
+      5257,
+      1655,
+      239,
+      1311,
+      2372,
+      5380,
+      4191,
+      4207,
+      315,
+      2208,
+      2588,
+      1660,
+      5925,
+      2863,
+      3873,
+      4108,
+      3625,
+      5761,
+      4434,
+      2337,
+      5952,
+      2554,
+      5365,
+      563,
+      2650,
+      5538,
+      2473,
+      5859,
+      2670,
+      3531,
+      4131,
+      73,
+      5655,
+      157,
+      4661,
+      3008,
+      2347,
+      2681,
+      1255,
+      4393,
+      5447,
+      247,
+      696,
+      3123,
+      644,
+      527,
+      4449,
+      3969,
+      3921,
+      4435,
+      3435,
+      173,
+      33,
+      2468,
+      5392,
+      3259,
+      3394,
+      1788,
+      4098,
+      3421,
+      5627,
+      3857,
+      3282,
+      4783,
+      5549,
+      1743,
+      5063,
+      5617,
+      959,
+      1356,
+      5353,
+      1938,
+      47,
+      2026,
+      1111,
+      2639,
+      5786,
+      649,
+      3644,
+      4970,
+      2465,
+      616,
+      5129,
+      3874,
+      5645,
+      431,
+      358,
+      947,
+      3226,
+      3732,
+      3296,
+      3993,
+      2184,
+      5942,
+      988,
+      4571,
+      4030,
+      4153,
+      5621,
+      4034,
+      752,
+      2411,
+      5528,
+      3681,
+      2545,
+      5554,
+      2608,
+      2814,
+      5945,
+      1423,
+      212,
+      4430,
+      913,
+      1217,
+      1051,
+      3708,
+      196,
+      880,
+      1870,
+      1716,
+      3678,
+      3986,
+      5113,
+      2896,
+      2940,
+      1970,
+      3013,
+      3991,
+      2739,
+      1065,
+      4705,
+      663,
+      589,
+      1261,
+      801,
+      3423,
+      1328,
+      2513,
+      5731,
+      4137,
+      4001,
+      1908,
+      5477,
+      2758,
+      5689,
+      4868,
+      2759,
+      743,
+      5869,
+      5460,
+      328,
+      4711,
+      4299,
+      282,
+      2092,
+      5872,
+      1056,
+      4752,
+      4461,
+      3981,
+      2339,
+      4312,
+      5333,
+      4521,
+      3916,
+      4259,
+      3081
+    ],
+    "class_counts": [
+      95,
+      80,
+      69,
+      90,
+      87,
+      91
+    ],
+    "subset64_class_counts": [
+      18,
+      7,
+      8,
+      8,
+      8,
+      15
+    ],
+    "split_sha256": "2f22ed624e612dfaf775ef1aac4edba305eb66815ed98a0b2a907cf4bdaa7871",
+    "normalization": "source training statistics embedded in checkpoint"
+  },
+  "selection_split": "validation",
+  "test_used_for_selection": false,
+  "selection_rule": "smallest deployment archive within 0.02 validation F1 of original float",
+  "candidates": [
+    {
+      "name": "float_original",
+      "archive": "artifacts/quantization/float_original/model.ts",
+      "archive_sha256": "8e457767278b996bb930d2c347b37edb64d72840deacf60a31a6da094411721b",
+      "archive_bytes": 80433,
+      "layers": [
+        {
+          "name": "encoder.0",
+          "module": "Conv1d",
+          "weight_shape": [
+            24,
+            9,
+            5
+          ],
+          "weight_dtype": "torch.float32",
+          "quantized_weight": false,
+          "weight_qscheme": null
+        },
+        {
+          "name": "encoder.3",
+          "module": "Conv1d",
+          "weight_shape": [
+            24,
+            24,
+            5
+          ],
+          "weight_dtype": "torch.float32",
+          "quantized_weight": false,
+          "weight_qscheme": null
+        },
+        {
+          "name": "head.0",
+          "module": "Linear",
+          "weight_shape": [
+            48,
+            192
+          ],
+          "weight_dtype": "torch.float32",
+          "quantized_weight": false,
+          "weight_qscheme": null
+        },
+        {
+          "name": "head.3",
+          "module": "Linear",
+          "weight_shape": [
+            6,
+            48
+          ],
+          "weight_dtype": "torch.float32",
+          "quantized_weight": false,
+          "weight_qscheme": null
+        }
+      ],
+      "history": [],
+      "archive_roundtrip_passed": true,
+      "validation": {
+        "accuracy": 0.9558610709117221,
+        "macro_f1": 0.9601672532197753,
+        "ece_10bin": 0.03096061444662068,
+        "confusion_matrix": [
+          [
+            220,
+            0,
+            1,
+            0,
+            0,
+            0
+          ],
+          [
+            0,
+            190,
+            0,
+            0,
+            0,
+            0
+          ],
+          [
+            0,
+            0,
+            178,
+            0,
+            0,
+            0
+          ],
+          [
+            0,
+            0,
+            0,
+            231,
+            8,
+            15
+          ],
+          [
+            0,
+            0,
+            0,
+            37,
+            219,
+            0
+          ],
+          [
+            0,
+            0,
+            0,
+            0,
+            0,
+            283
+          ]
+        ]
+      },
+      "outage_validation": {
+        "accuracy": 0.9334298118668596,
+        "macro_f1": 0.9351051321036065,
+        "ece_10bin": 0.04479928459168863,
+        "confusion_matrix": [
+          [
+            202,
+            19,
+            0,
+            0,
+            0,
+            0
+          ],
+          [
+            12,
+            178,
+            0,
+            0,
+            0,
+            0
+          ],
+          [
+            0,
+            0,
+            178,
+            0,
+            0,
+            0
+          ],
+          [
+            0,
+            0,
+            0,
+            229,
+            10,
+            15
+          ],
+          [
+            0,
+            0,
+            0,
+            36,
+            220,
+            0
+          ],
+          [
+            0,
+            0,
+            0,
+            0,
+            0,
+            283
+          ]
+        ]
+      },
+      "timing_rounds": [
+        {
+          "batch1": {
+            "p50_ms": 0.06325,
+            "p95_ms": 0.06750415,
+            "batch_size": 1,
+            "repeats": 100,
+            "warmup": 30,
+            "scope": "loaded TorchScript CPU forward; resident inputs; no loading/softmax/transfers"
+          },
+          "batch64": {
+            "p50_ms": 3.1493960000000003,
+            "p95_ms": 3.4397973,
+            "batch_size": 64,
+            "repeats": 100,
+            "warmup": 30,
+            "scope": "loaded TorchScript CPU forward; resident inputs; no loading/softmax/transfers"
+          }
+        },
+        {
+          "batch1": {
+            "p50_ms": 0.061833,
+            "p95_ms": 0.066292,
+            "batch_size": 1,
+            "repeats": 100,
+            "warmup": 30,
+            "scope": "loaded TorchScript CPU forward; resident inputs; no loading/softmax/transfers"
+          },
+          "batch64": {
+            "p50_ms": 3.1461870000000003,
+            "p95_ms": 3.4317547999999998,
+            "batch_size": 64,
+            "repeats": 100,
+            "warmup": 30,
+            "scope": "loaded TorchScript CPU forward; resident inputs; no loading/softmax/transfers"
+          }
+        },
+        {
+          "batch1": {
+            "p50_ms": 0.061875,
+            "p95_ms": 0.0658372,
+            "batch_size": 1,
+            "repeats": 100,
+            "warmup": 30,
+            "scope": "loaded TorchScript CPU forward; resident inputs; no loading/softmax/transfers"
+          },
+          "batch64": {
+            "p50_ms": 3.2233335,
+            "p95_ms": 3.5250035,
+            "batch_size": 64,
+            "repeats": 100,
+            "warmup": 30,
+            "scope": "loaded TorchScript CPU forward; resident inputs; no loading/softmax/transfers"
+          }
+        }
+      ],
+      "timing": {
+        "batch1": {
+          "p50_ms": 0.061875,
+          "p95_ms": 0.066292,
+          "batch_size": 1,
+          "repeats": 100,
+          "warmup": 30,
+          "scope": "loaded TorchScript CPU forward; resident inputs; no loading/softmax/transfers",
+          "p95_round_range_ms": [
+            0.0658372,
+            0.06750415
+          ]
+        },
+        "batch64": {
+          "p50_ms": 3.1493960000000003,
+          "p95_ms": 3.4397973,
+          "batch_size": 64,
+          "repeats": 100,
+          "warmup": 30,
+          "scope": "loaded TorchScript CPU forward; resident inputs; no loading/softmax/transfers",
+          "p95_round_range_ms": [
+            3.4317547999999998,
+            3.5250035
+          ]
+        }
+      },
+      "test": {
+        "accuracy": 0.9138106549032915,
+        "macro_f1": 0.9138861429578716,
+        "ece_10bin": 0.05650083792990328,
+        "confusion_matrix": [
+          [
+            488,
+            3,
+            5,
+            0,
+            0,
+            0
+          ],
+          [
+            0,
+            437,
+            34,
+            0,
+            0,
+            0
+          ],
+          [
+            2,
+            3,
+            415,
+            0,
+            0,
+            0
+          ],
+          [
+            0,
+            25,
+            0,
+            378,
+            88,
+            0
+          ],
+          [
+            0,
+            0,
+            0,
+            93,
+            439,
+            0
+          ],
+          [
+            0,
+            1,
+            0,
+            0,
+            0,
+            536
+          ]
+        ]
+      },
+      "test_top1_agreement_with_original_float": 1.0
+    },
+    {
+      "name": "float_finetuned",
+      "archive": "artifacts/quantization/float_finetuned/model.ts",
+      "archive_sha256": "e43dbabd77c829dd6268b22a093b8798135410a78a9abeac130c327012671373",
+      "archive_bytes": 81299,
+      "layers": [
+        {
+          "name": "encoder.0",
+          "module": "Conv1d",
+          "weight_shape": [
+            24,
+            9,
+            5
+          ],
+          "weight_dtype": "torch.float32",
+          "quantized_weight": false,
+          "weight_qscheme": null
+        },
+        {
+          "name": "encoder.3",
+          "module": "Conv1d",
+          "weight_shape": [
+            24,
+            24,
+            5
+          ],
+          "weight_dtype": "torch.float32",
+          "quantized_weight": false,
+          "weight_qscheme": null
+        },
+        {
+          "name": "head.0",
+          "module": "Linear",
+          "weight_shape": [
+            48,
+            192
+          ],
+          "weight_dtype": "torch.float32",
+          "quantized_weight": false,
+          "weight_qscheme": null
+        },
+        {
+          "name": "head.3",
+          "module": "Linear",
+          "weight_shape": [
+            6,
+            48
+          ],
+          "weight_dtype": "torch.float32",
+          "quantized_weight": false,
+          "weight_qscheme": null
+        }
+      ],
+      "history": [
+        {
+          "epoch": 0,
+          "validation_macro_f1": 0.9601672532197753
+        },
+        {
+          "epoch": 1,
+          "validation_macro_f1": 0.9550728219495217
+        },
+        {
+          "epoch": 2,
+          "validation_macro_f1": 0.9506004535996239
+        },
+        {
+          "epoch": 3,
+          "validation_macro_f1": 0.9558914757586155
+        },
+        {
+          "epoch": 4,
+          "validation_macro_f1": 0.9553969804665255
+        },
+        {
+          "epoch": 5,
+          "validation_macro_f1": 0.9545917921448228
+        }
+      ],
+      "archive_roundtrip_passed": true,
+      "validation": {
+        "accuracy": 0.9558610709117221,
+        "macro_f1": 0.9601672532197753,
+        "ece_10bin": 0.03096061444662068,
+        "confusion_matrix": [
+          [
+            220,
+            0,
+            1,
+            0,
+            0,
+            0
+          ],
+          [
+            0,
+            190,
+            0,
+            0,
+            0,
+            0
+          ],
+          [
+            0,
+            0,
+            178,
+            0,
+            0,
+            0
+          ],
+          [
+            0,
+            0,
+            0,
+            231,
+            8,
+            15
+          ],
+          [
+            0,
+            0,
+            0,
+            37,
+            219,
+            0
+          ],
+          [
+            0,
+            0,
+            0,
+            0,
+            0,
+            283
+          ]
+        ]
+      },
+      "outage_validation": {
+        "accuracy": 0.9334298118668596,
+        "macro_f1": 0.9351051321036065,
+        "ece_10bin": 0.04479928459168863,
+        "confusion_matrix": [
+          [
+            202,
+            19,
+            0,
+            0,
+            0,
+            0
+          ],
+          [
+            12,
+            178,
+            0,
+            0,
+            0,
+            0
+          ],
+          [
+            0,
+            0,
+            178,
+            0,
+            0,
+            0
+          ],
+          [
+            0,
+            0,
+            0,
+            229,
+            10,
+            15
+          ],
+          [
+            0,
+            0,
+            0,
+            36,
+            220,
+            0
+          ],
+          [
+            0,
+            0,
+            0,
+            0,
+            0,
+            283
+          ]
+        ]
+      },
+      "timing_rounds": [
+        {
+          "batch1": {
+            "p50_ms": 0.0618335,
+            "p95_ms": 0.06562915,
+            "batch_size": 1,
+            "repeats": 100,
+            "warmup": 30,
+            "scope": "loaded TorchScript CPU forward; resident inputs; no loading/softmax/transfers"
+          },
+          "batch64": {
+            "p50_ms": 3.1518745,
+            "p95_ms": 3.447775,
+            "batch_size": 64,
+            "repeats": 100,
+            "warmup": 30,
+            "scope": "loaded TorchScript CPU forward; resident inputs; no loading/softmax/transfers"
+          }
+        },
+        {
+          "batch1": {
+            "p50_ms": 0.062541,
+            "p95_ms": 0.06409555,
+            "batch_size": 1,
+            "repeats": 100,
+            "warmup": 30,
+            "scope": "loaded TorchScript CPU forward; resident inputs; no loading/softmax/transfers"
+          },
+          "batch64": {
+            "p50_ms": 3.1555205,
+            "p95_ms": 3.3882896,
+            "batch_size": 64,
+            "repeats": 100,
+            "warmup": 30,
+            "scope": "loaded TorchScript CPU forward; resident inputs; no loading/softmax/transfers"
+          }
+        },
+        {
+          "batch1": {
+            "p50_ms": 0.0705625,
+            "p95_ms": 0.07120805,
+            "batch_size": 1,
+            "repeats": 100,
+            "warmup": 30,
+            "scope": "loaded TorchScript CPU forward; resident inputs; no loading/softmax/transfers"
+          },
+          "batch64": {
+            "p50_ms": 3.1369165,
+            "p95_ms": 3.4575806,
+            "batch_size": 64,
+            "repeats": 100,
+            "warmup": 30,
+            "scope": "loaded TorchScript CPU forward; resident inputs; no loading/softmax/transfers"
+          }
+        }
+      ],
+      "timing": {
+        "batch1": {
+          "p50_ms": 0.062541,
+          "p95_ms": 0.06562915,
+          "batch_size": 1,
+          "repeats": 100,
+          "warmup": 30,
+          "scope": "loaded TorchScript CPU forward; resident inputs; no loading/softmax/transfers",
+          "p95_round_range_ms": [
+            0.06409555,
+            0.07120805
+          ]
+        },
+        "batch64": {
+          "p50_ms": 3.1518745,
+          "p95_ms": 3.447775,
+          "batch_size": 64,
+          "repeats": 100,
+          "warmup": 30,
+          "scope": "loaded TorchScript CPU forward; resident inputs; no loading/softmax/transfers",
+          "p95_round_range_ms": [
+            3.3882896,
+            3.4575806
+          ]
+        }
+      },
+      "test": {
+        "accuracy": 0.9138106549032915,
+        "macro_f1": 0.9138861429578716,
+        "ece_10bin": 0.05650083792990328,
+        "confusion_matrix": [
+          [
+            488,
+            3,
+            5,
+            0,
+            0,
+            0
+          ],
+          [
+            0,
+            437,
+            34,
+            0,
+            0,
+            0
+          ],
+          [
+            2,
+            3,
+            415,
+            0,
+            0,
+            0
+          ],
+          [
+            0,
+            25,
+            0,
+            378,
+            88,
+            0
+          ],
+          [
+            0,
+            0,
+            0,
+            93,
+            439,
+            0
+          ],
+          [
+            0,
+            1,
+            0,
+            0,
+            0,
+            536
+          ]
+        ]
+      },
+      "test_top1_agreement_with_original_float": 1.0,
+      "selected_finetuning_epoch": 0
+    },
+    {
+      "name": "dynamic_int8_linear",
+      "archive": "artifacts/quantization/dynamic_int8_linear/model.ts",
+      "archive_sha256": "882de790f915676c3b7f854bd051487fb8b9166a0ec50fb8a6a86f257367cbe6",
+      "archive_bytes": 58023,
+      "layers": [
+        {
+          "name": "encoder.0",
+          "module": "Conv1d",
+          "weight_shape": [
+            24,
+            9,
+            5
+          ],
+          "weight_dtype": "torch.float32",
+          "quantized_weight": false,
+          "weight_qscheme": null
+        },
+        {
+          "name": "encoder.3",
+          "module": "Conv1d",
+          "weight_shape": [
+            24,
+            24,
+            5
+          ],
+          "weight_dtype": "torch.float32",
+          "quantized_weight": false,
+          "weight_qscheme": null
+        },
+        {
+          "name": "head.0",
+          "module": "Linear",
+          "weight_shape": [
+            48,
+            192
+          ],
+          "weight_dtype": "torch.qint8",
+          "quantized_weight": true,
+          "weight_qscheme": "torch.per_tensor_affine"
+        },
+        {
+          "name": "head.3",
+          "module": "Linear",
+          "weight_shape": [
+            6,
+            48
+          ],
+          "weight_dtype": "torch.qint8",
+          "quantized_weight": true,
+          "weight_qscheme": "torch.per_tensor_affine"
+        }
+      ],
+      "history": [],
+      "archive_roundtrip_passed": true,
+      "validation": {
+        "accuracy": 0.9558610709117221,
+        "macro_f1": 0.9601672532197753,
+        "ece_10bin": 0.030340698063804846,
+        "confusion_matrix": [
+          [
+            220,
+            0,
+            1,
+            0,
+            0,
+            0
+          ],
+          [
+            0,
+            190,
+            0,
+            0,
+            0,
+            0
+          ],
+          [
+            0,
+            0,
+            178,
+            0,
+            0,
+            0
+          ],
+          [
+            0,
+            0,
+            0,
+            231,
+            8,
+            15
+          ],
+          [
+            0,
+            0,
+            0,
+            37,
+            219,
+            0
+          ],
+          [
+            0,
+            0,
+            0,
+            0,
+            0,
+            283
+          ]
+        ]
+      },
+      "outage_validation": {
+        "accuracy": 0.9341534008683068,
+        "macro_f1": 0.935911828817905,
+        "ece_10bin": 0.04598722068859766,
+        "confusion_matrix": [
+          [
+            203,
+            18,
+            0,
+            0,
+            0,
+            0
+          ],
+          [
+            12,
+            178,
+            0,
+            0,
+            0,
+            0
+          ],
+          [
+            0,
+            0,
+            178,
+            0,
+            0,
+            0
+          ],
+          [
+            0,
+            0,
+            0,
+            229,
+            10,
+            15
+          ],
+          [
+            0,
+            0,
+            0,
+            36,
+            220,
+            0
+          ],
+          [
+            0,
+            0,
+            0,
+            0,
+            0,
+            283
+          ]
+        ]
+      },
+      "timing_rounds": [
+        {
+          "batch1": {
+            "p50_ms": 0.085833,
+            "p95_ms": 0.14642769999999972,
+            "batch_size": 1,
+            "repeats": 100,
+            "warmup": 30,
+            "scope": "loaded TorchScript CPU forward; resident inputs; no loading/softmax/transfers"
+          },
+          "batch64": {
+            "p50_ms": 3.0991255,
+            "p95_ms": 3.4478149,
+            "batch_size": 64,
+            "repeats": 100,
+            "warmup": 30,
+            "scope": "loaded TorchScript CPU forward; resident inputs; no loading/softmax/transfers"
+          }
+        },
+        {
+          "batch1": {
+            "p50_ms": 0.1113745,
+            "p95_ms": 0.21745175,
+            "batch_size": 1,
+            "repeats": 100,
+            "warmup": 30,
+            "scope": "loaded TorchScript CPU forward; resident inputs; no loading/softmax/transfers"
+          },
+          "batch64": {
+            "p50_ms": 3.327375,
+            "p95_ms": 3.79030145,
+            "batch_size": 64,
+            "repeats": 100,
+            "warmup": 30,
+            "scope": "loaded TorchScript CPU forward; resident inputs; no loading/softmax/transfers"
+          }
+        },
+        {
+          "batch1": {
+            "p50_ms": 0.087,
+            "p95_ms": 0.14508124999999997,
+            "batch_size": 1,
+            "repeats": 100,
+            "warmup": 30,
+            "scope": "loaded TorchScript CPU forward; resident inputs; no loading/softmax/transfers"
+          },
+          "batch64": {
+            "p50_ms": 3.1680625,
+            "p95_ms": 3.46164405,
+            "batch_size": 64,
+            "repeats": 100,
+            "warmup": 30,
+            "scope": "loaded TorchScript CPU forward; resident inputs; no loading/softmax/transfers"
+          }
+        }
+      ],
+      "timing": {
+        "batch1": {
+          "p50_ms": 0.087,
+          "p95_ms": 0.14642769999999972,
+          "batch_size": 1,
+          "repeats": 100,
+          "warmup": 30,
+          "scope": "loaded TorchScript CPU forward; resident inputs; no loading/softmax/transfers",
+          "p95_round_range_ms": [
+            0.14508124999999997,
+            0.21745175
+          ]
+        },
+        "batch64": {
+          "p50_ms": 3.1680625,
+          "p95_ms": 3.46164405,
+          "batch_size": 64,
+          "repeats": 100,
+          "warmup": 30,
+          "scope": "loaded TorchScript CPU forward; resident inputs; no loading/softmax/transfers",
+          "p95_round_range_ms": [
+            3.4478149,
+            3.79030145
+          ]
+        }
+      },
+      "test": {
+        "accuracy": 0.9138106549032915,
+        "macro_f1": 0.9138861429578716,
+        "ece_10bin": 0.05687527865687179,
+        "confusion_matrix": [
+          [
+            488,
+            3,
+            5,
+            0,
+            0,
+            0
+          ],
+          [
+            0,
+            437,
+            34,
+            0,
+            0,
+            0
+          ],
+          [
+            2,
+            3,
+            415,
+            0,
+            0,
+            0
+          ],
+          [
+            0,
+            25,
+            0,
+            378,
+            88,
+            0
+          ],
+          [
+            0,
+            0,
+            0,
+            93,
+            439,
+            0
+          ],
+          [
+            0,
+            1,
+            0,
+            0,
+            0,
+            536
+          ]
+        ]
+      },
+      "test_top1_agreement_with_original_float": 1.0
+    },
+    {
+      "name": "static_ptq_64",
+      "archive": "artifacts/quantization/static_ptq_64/model.ts",
+      "archive_sha256": "0f785b760940ea21ef0d462c703190074e20d6a54f58a49ecc3078de7c11a661",
+      "archive_bytes": 40627,
+      "layers": [
+        {
+          "name": "encoder.0",
+          "module": "ConvReLU1d",
+          "weight_shape": [
+            24,
+            9,
+            5
+          ],
+          "weight_dtype": "torch.qint8",
+          "quantized_weight": true,
+          "weight_qscheme": "torch.per_tensor_affine"
+        },
+        {
+          "name": "encoder.3",
+          "module": "ConvReLU1d",
+          "weight_shape": [
+            24,
+            24,
+            5
+          ],
+          "weight_dtype": "torch.qint8",
+          "quantized_weight": true,
+          "weight_qscheme": "torch.per_tensor_affine"
+        },
+        {
+          "name": "head.0",
+          "module": "LinearReLU",
+          "weight_shape": [
+            48,
+            192
+          ],
+          "weight_dtype": "torch.qint8",
+          "quantized_weight": true,
+          "weight_qscheme": "torch.per_tensor_affine"
+        },
+        {
+          "name": "head.3",
+          "module": "Linear",
+          "weight_shape": [
+            6,
+            48
+          ],
+          "weight_dtype": "torch.qint8",
+          "quantized_weight": true,
+          "weight_qscheme": "torch.per_tensor_affine"
+        }
+      ],
+      "history": [],
+      "archive_roundtrip_passed": true,
+      "validation": {
+        "accuracy": 0.9529667149059334,
+        "macro_f1": 0.9575240491959832,
+        "ece_10bin": 0.032985775110172984,
+        "confusion_matrix": [
+          [
+            220,
+            0,
+            1,
+            0,
+            0,
+            0
+          ],
+          [
+            0,
+            190,
+            0,
+            0,
+            0,
+            0
+          ],
+          [
+            0,
+            0,
+            178,
+            0,
+            0,
+            0
+          ],
+          [
+            0,
+            0,
+            0,
+            231,
+            8,
+            15
+          ],
+          [
+            0,
+            0,
+            0,
+            41,
+            215,
+            0
+          ],
+          [
+            0,
+            0,
+            0,
+            0,
+            0,
+            283
+          ]
+        ]
+      },
+      "outage_validation": {
+        "accuracy": 0.9276410998552822,
+        "macro_f1": 0.9294828900649031,
+        "ece_10bin": 0.04632236941160925,
+        "confusion_matrix": [
+          [
+            203,
+            18,
+            0,
+            0,
+            0,
+            0
+          ],
+          [
+            15,
+            175,
+            0,
+            0,
+            0,
+            0
+          ],
+          [
+            0,
+            0,
+            178,
+            0,
+            0,
+            0
+          ],
+          [
+            0,
+            0,
+            0,
+            229,
+            10,
+            15
+          ],
+          [
+            0,
+            0,
+            0,
+            42,
+            214,
+            0
+          ],
+          [
+            0,
+            0,
+            0,
+            0,
+            0,
+            283
+          ]
+        ]
+      },
+      "timing_rounds": [
+        {
+          "batch1": {
+            "p50_ms": 0.050458,
+            "p95_ms": 0.06004615,
+            "batch_size": 1,
+            "repeats": 100,
+            "warmup": 30,
+            "scope": "loaded TorchScript CPU forward; resident inputs; no loading/softmax/transfers"
+          },
+          "batch64": {
+            "p50_ms": 0.527604,
+            "p95_ms": 0.6269191,
+            "batch_size": 64,
+            "repeats": 100,
+            "warmup": 30,
+            "scope": "loaded TorchScript CPU forward; resident inputs; no loading/softmax/transfers"
+          }
+        },
+        {
+          "batch1": {
+            "p50_ms": 0.0466455,
+            "p95_ms": 0.0568077,
+            "batch_size": 1,
+            "repeats": 100,
+            "warmup": 30,
+            "scope": "loaded TorchScript CPU forward; resident inputs; no loading/softmax/transfers"
+          },
+          "batch64": {
+            "p50_ms": 0.497583,
+            "p95_ms": 0.59433125,
+            "batch_size": 64,
+            "repeats": 100,
+            "warmup": 30,
+            "scope": "loaded TorchScript CPU forward; resident inputs; no loading/softmax/transfers"
+          }
+        },
+        {
+          "batch1": {
+            "p50_ms": 0.050375,
+            "p95_ms": 0.06143335,
+            "batch_size": 1,
+            "repeats": 100,
+            "warmup": 30,
+            "scope": "loaded TorchScript CPU forward; resident inputs; no loading/softmax/transfers"
+          },
+          "batch64": {
+            "p50_ms": 0.5049794999999999,
+            "p95_ms": 0.60196845,
+            "batch_size": 64,
+            "repeats": 100,
+            "warmup": 30,
+            "scope": "loaded TorchScript CPU forward; resident inputs; no loading/softmax/transfers"
+          }
+        }
+      ],
+      "timing": {
+        "batch1": {
+          "p50_ms": 0.050375,
+          "p95_ms": 0.06004615,
+          "batch_size": 1,
+          "repeats": 100,
+          "warmup": 30,
+          "scope": "loaded TorchScript CPU forward; resident inputs; no loading/softmax/transfers",
+          "p95_round_range_ms": [
+            0.0568077,
+            0.06143335
+          ]
+        },
+        "batch64": {
+          "p50_ms": 0.5049794999999999,
+          "p95_ms": 0.60196845,
+          "batch_size": 64,
+          "repeats": 100,
+          "warmup": 30,
+          "scope": "loaded TorchScript CPU forward; resident inputs; no loading/softmax/transfers",
+          "p95_round_range_ms": [
+            0.59433125,
+            0.6269191
+          ]
+        }
+      },
+      "test": {
+        "accuracy": 0.9141499830335935,
+        "macro_f1": 0.9142536177667218,
+        "ece_10bin": 0.055390164655550134,
+        "confusion_matrix": [
+          [
+            488,
+            3,
+            5,
+            0,
+            0,
+            0
+          ],
+          [
+            0,
+            436,
+            35,
+            0,
+            0,
+            0
+          ],
+          [
+            2,
+            3,
+            415,
+            0,
+            0,
+            0
+          ],
+          [
+            0,
+            25,
+            0,
+            383,
+            83,
+            0
+          ],
+          [
+            0,
+            0,
+            0,
+            96,
+            436,
+            0
+          ],
+          [
+            0,
+            1,
+            0,
+            0,
+            0,
+            536
+          ]
+        ]
+      },
+      "test_top1_agreement_with_original_float": 0.9969460468272819
+    },
+    {
+      "name": "static_ptq_512",
+      "archive": "artifacts/quantization/static_ptq_512/model.ts",
+      "archive_sha256": "58ab2106145f31271a090dacb8f9abb65aac9c3b84959de68ec4ee9169b3ca60",
+      "archive_bytes": 41199,
+      "layers": [
+        {
+          "name": "encoder.0",
+          "module": "ConvReLU1d",
+          "weight_shape": [
+            24,
+            9,
+            5
+          ],
+          "weight_dtype": "torch.qint8",
+          "quantized_weight": true,
+          "weight_qscheme": "torch.per_tensor_affine"
+        },
+        {
+          "name": "encoder.3",
+          "module": "ConvReLU1d",
+          "weight_shape": [
+            24,
+            24,
+            5
+          ],
+          "weight_dtype": "torch.qint8",
+          "quantized_weight": true,
+          "weight_qscheme": "torch.per_tensor_affine"
+        },
+        {
+          "name": "head.0",
+          "module": "LinearReLU",
+          "weight_shape": [
+            48,
+            192
+          ],
+          "weight_dtype": "torch.qint8",
+          "quantized_weight": true,
+          "weight_qscheme": "torch.per_tensor_affine"
+        },
+        {
+          "name": "head.3",
+          "module": "Linear",
+          "weight_shape": [
+            6,
+            48
+          ],
+          "weight_dtype": "torch.qint8",
+          "quantized_weight": true,
+          "weight_qscheme": "torch.per_tensor_affine"
+        }
+      ],
+      "history": [],
+      "archive_roundtrip_passed": true,
+      "validation": {
+        "accuracy": 0.9536903039073806,
+        "macro_f1": 0.9581856249862729,
+        "ece_10bin": 0.03400825535509245,
+        "confusion_matrix": [
+          [
+            220,
+            0,
+            1,
+            0,
+            0,
+            0
+          ],
+          [
+            0,
+            190,
+            0,
+            0,
+            0,
+            0
+          ],
+          [
+            0,
+            0,
+            178,
+            0,
+            0,
+            0
+          ],
+          [
+            0,
+            0,
+            0,
+            231,
+            8,
+            15
+          ],
+          [
+            0,
+            0,
+            0,
+            40,
+            216,
+            0
+          ],
+          [
+            0,
+            0,
+            0,
+            0,
+            0,
+            283
+          ]
+        ]
+      },
+      "outage_validation": {
+        "accuracy": 0.9290882778581766,
+        "macro_f1": 0.9308053831193647,
+        "ece_10bin": 0.04784317832175973,
+        "confusion_matrix": [
+          [
+            203,
+            18,
+            0,
+            0,
+            0,
+            0
+          ],
+          [
+            15,
+            175,
+            0,
+            0,
+            0,
+            0
+          ],
+          [
+            0,
+            0,
+            178,
+            0,
+            0,
+            0
+          ],
+          [
+            0,
+            0,
+            0,
+            229,
+            10,
+            15
+          ],
+          [
+            0,
+            0,
+            0,
+            40,
+            216,
+            0
+          ],
+          [
+            0,
+            0,
+            0,
+            0,
+            0,
+            283
+          ]
+        ]
+      },
+      "timing_rounds": [
+        {
+          "batch1": {
+            "p50_ms": 0.043958,
+            "p95_ms": 0.059083,
+            "batch_size": 1,
+            "repeats": 100,
+            "warmup": 30,
+            "scope": "loaded TorchScript CPU forward; resident inputs; no loading/softmax/transfers"
+          },
+          "batch64": {
+            "p50_ms": 0.419292,
+            "p95_ms": 0.59825595,
+            "batch_size": 64,
+            "repeats": 100,
+            "warmup": 30,
+            "scope": "loaded TorchScript CPU forward; resident inputs; no loading/softmax/transfers"
+          }
+        },
+        {
+          "batch1": {
+            "p50_ms": 0.041146,
+            "p95_ms": 0.06219344999999999,
+            "batch_size": 1,
+            "repeats": 100,
+            "warmup": 30,
+            "scope": "loaded TorchScript CPU forward; resident inputs; no loading/softmax/transfers"
+          },
+          "batch64": {
+            "p50_ms": 0.494521,
+            "p95_ms": 0.61642085,
+            "batch_size": 64,
+            "repeats": 100,
+            "warmup": 30,
+            "scope": "loaded TorchScript CPU forward; resident inputs; no loading/softmax/transfers"
+          }
+        },
+        {
+          "batch1": {
+            "p50_ms": 0.0469375,
+            "p95_ms": 0.059899999999999995,
+            "batch_size": 1,
+            "repeats": 100,
+            "warmup": 30,
+            "scope": "loaded TorchScript CPU forward; resident inputs; no loading/softmax/transfers"
+          },
+          "batch64": {
+            "p50_ms": 0.531667,
+            "p95_ms": 0.6348020999999999,
+            "batch_size": 64,
+            "repeats": 100,
+            "warmup": 30,
+            "scope": "loaded TorchScript CPU forward; resident inputs; no loading/softmax/transfers"
+          }
+        }
+      ],
+      "timing": {
+        "batch1": {
+          "p50_ms": 0.043958,
+          "p95_ms": 0.059899999999999995,
+          "batch_size": 1,
+          "repeats": 100,
+          "warmup": 30,
+          "scope": "loaded TorchScript CPU forward; resident inputs; no loading/softmax/transfers",
+          "p95_round_range_ms": [
+            0.059083,
+            0.06219344999999999
+          ]
+        },
+        "batch64": {
+          "p50_ms": 0.494521,
+          "p95_ms": 0.61642085,
+          "batch_size": 64,
+          "repeats": 100,
+          "warmup": 30,
+          "scope": "loaded TorchScript CPU forward; resident inputs; no loading/softmax/transfers",
+          "p95_round_range_ms": [
+            0.59825595,
+            0.6348020999999999
+          ]
+        }
+      },
+      "test": {
+        "accuracy": 0.9134713267729895,
+        "macro_f1": 0.9136997458579122,
+        "ece_10bin": 0.05602904114635829,
+        "confusion_matrix": [
+          [
+            489,
+            3,
+            4,
+            0,
+            0,
+            0
+          ],
+          [
+            0,
+            437,
+            34,
+            0,
+            0,
+            0
+          ],
+          [
+            2,
+            2,
+            416,
+            0,
+            0,
+            0
+          ],
+          [
+            0,
+            25,
+            0,
+            381,
+            85,
+            0
+          ],
+          [
+            0,
+            0,
+            0,
+            97,
+            435,
+            0
+          ],
+          [
+            0,
+            3,
+            0,
+            0,
+            0,
+            534
+          ]
+        ]
+      },
+      "test_top1_agreement_with_original_float": 0.995588734306074
+    },
+    {
+      "name": "qat_int8",
+      "archive": "artifacts/quantization/qat_int8/model.ts",
+      "archive_sha256": "3e7faccfbccd470b2140a5f25d30ffb810225aab3b1f81fdd5f6ca9dc484340a",
+      "archive_bytes": 41199,
+      "layers": [
+        {
+          "name": "encoder.0",
+          "module": "ConvReLU1d",
+          "weight_shape": [
+            24,
+            9,
+            5
+          ],
+          "weight_dtype": "torch.qint8",
+          "quantized_weight": true,
+          "weight_qscheme": "torch.per_tensor_affine"
+        },
+        {
+          "name": "encoder.3",
+          "module": "ConvReLU1d",
+          "weight_shape": [
+            24,
+            24,
+            5
+          ],
+          "weight_dtype": "torch.qint8",
+          "quantized_weight": true,
+          "weight_qscheme": "torch.per_tensor_affine"
+        },
+        {
+          "name": "head.0",
+          "module": "LinearReLU",
+          "weight_shape": [
+            48,
+            192
+          ],
+          "weight_dtype": "torch.qint8",
+          "quantized_weight": true,
+          "weight_qscheme": "torch.per_tensor_affine"
+        },
+        {
+          "name": "head.3",
+          "module": "Linear",
+          "weight_shape": [
+            6,
+            48
+          ],
+          "weight_dtype": "torch.qint8",
+          "quantized_weight": true,
+          "weight_qscheme": "torch.per_tensor_affine"
+        }
+      ],
+      "history": [
+        {
+          "epoch": 0,
+          "validation_macro_f1": 0.9575240491959832
+        },
+        {
+          "epoch": 1,
+          "validation_macro_f1": 0.9544127797356055
+        },
+        {
+          "epoch": 2,
+          "validation_macro_f1": 0.9525902311423905
+        },
+        {
+          "epoch": 3,
+          "validation_macro_f1": 0.9540743560762559
+        },
+        {
+          "epoch": 4,
+          "validation_macro_f1": 0.9551010135970688
+        },
+        {
+          "epoch": 5,
+          "validation_macro_f1": 0.9515218556290114
+        }
+      ],
+      "archive_roundtrip_passed": true,
+      "validation": {
+        "accuracy": 0.9529667149059334,
+        "macro_f1": 0.9575240491959832,
+        "ece_10bin": 0.03303425054991814,
+        "confusion_matrix": [
+          [
+            220,
+            0,
+            1,
+            0,
+            0,
+            0
+          ],
+          [
+            0,
+            190,
+            0,
+            0,
+            0,
+            0
+          ],
+          [
+            0,
+            0,
+            178,
+            0,
+            0,
+            0
+          ],
+          [
+            0,
+            0,
+            0,
+            231,
+            8,
+            15
+          ],
+          [
+            0,
+            0,
+            0,
+            41,
+            215,
+            0
+          ],
+          [
+            0,
+            0,
+            0,
+            0,
+            0,
+            283
+          ]
+        ]
+      },
+      "outage_validation": {
+        "accuracy": 0.926917510853835,
+        "macro_f1": 0.9286586833724599,
+        "ece_10bin": 0.04688194846968917,
+        "confusion_matrix": [
+          [
+            203,
+            18,
+            0,
+            0,
+            0,
+            0
+          ],
+          [
+            16,
+            174,
+            0,
+            0,
+            0,
+            0
+          ],
+          [
+            0,
+            0,
+            178,
+            0,
+            0,
+            0
+          ],
+          [
+            0,
+            0,
+            0,
+            229,
+            10,
+            15
+          ],
+          [
+            0,
+            0,
+            0,
+            42,
+            214,
+            0
+          ],
+          [
+            0,
+            0,
+            0,
+            0,
+            0,
+            283
+          ]
+        ]
+      },
+      "timing_rounds": [
+        {
+          "batch1": {
+            "p50_ms": 0.0485,
+            "p95_ms": 0.058079149999999996,
+            "batch_size": 1,
+            "repeats": 100,
+            "warmup": 30,
+            "scope": "loaded TorchScript CPU forward; resident inputs; no loading/softmax/transfers"
+          },
+          "batch64": {
+            "p50_ms": 0.3954585,
+            "p95_ms": 0.48954555,
+            "batch_size": 64,
+            "repeats": 100,
+            "warmup": 30,
+            "scope": "loaded TorchScript CPU forward; resident inputs; no loading/softmax/transfers"
+          }
+        },
+        {
+          "batch1": {
+            "p50_ms": 0.049875,
+            "p95_ms": 0.061687849999999995,
+            "batch_size": 1,
+            "repeats": 100,
+            "warmup": 30,
+            "scope": "loaded TorchScript CPU forward; resident inputs; no loading/softmax/transfers"
+          },
+          "batch64": {
+            "p50_ms": 0.5047710000000001,
+            "p95_ms": 0.61131665,
+            "batch_size": 64,
+            "repeats": 100,
+            "warmup": 30,
+            "scope": "loaded TorchScript CPU forward; resident inputs; no loading/softmax/transfers"
+          }
+        },
+        {
+          "batch1": {
+            "p50_ms": 0.049583,
+            "p95_ms": 0.0601878,
+            "batch_size": 1,
+            "repeats": 100,
+            "warmup": 30,
+            "scope": "loaded TorchScript CPU forward; resident inputs; no loading/softmax/transfers"
+          },
+          "batch64": {
+            "p50_ms": 0.515271,
+            "p95_ms": 0.6036681,
+            "batch_size": 64,
+            "repeats": 100,
+            "warmup": 30,
+            "scope": "loaded TorchScript CPU forward; resident inputs; no loading/softmax/transfers"
+          }
+        }
+      ],
+      "timing": {
+        "batch1": {
+          "p50_ms": 0.049583,
+          "p95_ms": 0.0601878,
+          "batch_size": 1,
+          "repeats": 100,
+          "warmup": 30,
+          "scope": "loaded TorchScript CPU forward; resident inputs; no loading/softmax/transfers",
+          "p95_round_range_ms": [
+            0.058079149999999996,
+            0.061687849999999995
+          ]
+        },
+        "batch64": {
+          "p50_ms": 0.5047710000000001,
+          "p95_ms": 0.6036681,
+          "batch_size": 64,
+          "repeats": 100,
+          "warmup": 30,
+          "scope": "loaded TorchScript CPU forward; resident inputs; no loading/softmax/transfers",
+          "p95_round_range_ms": [
+            0.48954555,
+            0.61131665
+          ]
+        }
+      },
+      "test": {
+        "accuracy": 0.9127926705123854,
+        "macro_f1": 0.9129444842529862,
+        "ece_10bin": 0.056533023993120275,
+        "confusion_matrix": [
+          [
+            489,
+            3,
+            4,
+            0,
+            0,
+            0
+          ],
+          [
+            0,
+            436,
+            35,
+            0,
+            0,
+            0
+          ],
+          [
+            2,
+            3,
+            415,
+            0,
+            0,
+            0
+          ],
+          [
+            0,
+            25,
+            0,
+            380,
+            86,
+            0
+          ],
+          [
+            0,
+            0,
+            0,
+            97,
+            435,
+            0
+          ],
+          [
+            0,
+            2,
+            0,
+            0,
+            0,
+            535
+          ]
+        ]
+      },
+      "test_top1_agreement_with_original_float": 0.9969460468272819,
+      "selected_finetuning_epoch": 0
+    },
+    {
+      "name": "compact_float",
+      "archive": "artifacts/quantization/compact_float/model.ts",
+      "archive_sha256": "680b7ca0eae9be14a56d58cb8341f5f3349964cff3685f08507b3249143a15d1",
+      "archive_bytes": 41969,
+      "layers": [
+        {
+          "name": "encoder.0",
+          "module": "Conv1d",
+          "weight_shape": [
+            12,
+            9,
+            5
+          ],
+          "weight_dtype": "torch.float32",
+          "quantized_weight": false,
+          "weight_qscheme": null
+        },
+        {
+          "name": "encoder.3",
+          "module": "Conv1d",
+          "weight_shape": [
+            12,
+            12,
+            5
+          ],
+          "weight_dtype": "torch.float32",
+          "quantized_weight": false,
+          "weight_qscheme": null
+        },
+        {
+          "name": "head.0",
+          "module": "Linear",
+          "weight_shape": [
+            24,
+            96
+          ],
+          "weight_dtype": "torch.float32",
+          "quantized_weight": false,
+          "weight_qscheme": null
+        },
+        {
+          "name": "head.3",
+          "module": "Linear",
+          "weight_shape": [
+            6,
+            24
+          ],
+          "weight_dtype": "torch.float32",
+          "quantized_weight": false,
+          "weight_qscheme": null
+        }
+      ],
+      "history": [],
+      "archive_roundtrip_passed": true,
+      "validation": {
+        "accuracy": 0.9406657018813314,
+        "macro_f1": 0.9450152233987871,
+        "ece_10bin": 0.05191633124686186,
+        "confusion_matrix": [
+          [
+            221,
+            0,
+            0,
+            0,
+            0,
+            0
+          ],
+          [
+            7,
+            181,
+            2,
+            0,
+            0,
+            0
+          ],
+          [
+            0,
+            0,
+            178,
+            0,
+            0,
+            0
+          ],
+          [
+            0,
+            0,
+            0,
+            225,
+            10,
+            19
+          ],
+          [
+            0,
+            0,
+            0,
+            43,
+            213,
+            0
+          ],
+          [
+            0,
+            0,
+            0,
+            1,
+            0,
+            282
+          ]
+        ]
+      },
+      "outage_validation": {
+        "accuracy": 0.914616497829233,
+        "macro_f1": 0.9153649151435163,
+        "ece_10bin": 0.062354361700425104,
+        "confusion_matrix": [
+          [
+            201,
+            15,
+            5,
+            0,
+            0,
+            0
+          ],
+          [
+            24,
+            165,
+            1,
+            0,
+            0,
+            0
+          ],
+          [
+            0,
+            0,
+            178,
+            0,
+            0,
+            0
+          ],
+          [
+            0,
+            0,
+            0,
+            225,
+            10,
+            19
+          ],
+          [
+            0,
+            0,
+            0,
+            43,
+            213,
+            0
+          ],
+          [
+            0,
+            0,
+            0,
+            1,
+            0,
+            282
+          ]
+        ]
+      },
+      "timing_rounds": [
+        {
+          "batch1": {
+            "p50_ms": 0.055083,
+            "p95_ms": 0.0562982,
+            "batch_size": 1,
+            "repeats": 100,
+            "warmup": 30,
+            "scope": "loaded TorchScript CPU forward; resident inputs; no loading/softmax/transfers"
+          },
+          "batch64": {
+            "p50_ms": 1.834104,
+            "p95_ms": 2.02140035,
+            "batch_size": 64,
+            "repeats": 100,
+            "warmup": 30,
+            "scope": "loaded TorchScript CPU forward; resident inputs; no loading/softmax/transfers"
+          }
+        },
+        {
+          "batch1": {
+            "p50_ms": 0.054709,
+            "p95_ms": 0.055504200000000004,
+            "batch_size": 1,
+            "repeats": 100,
+            "warmup": 30,
+            "scope": "loaded TorchScript CPU forward; resident inputs; no loading/softmax/transfers"
+          },
+          "batch64": {
+            "p50_ms": 1.816208,
+            "p95_ms": 1.9993625,
+            "batch_size": 64,
+            "repeats": 100,
+            "warmup": 30,
+            "scope": "loaded TorchScript CPU forward; resident inputs; no loading/softmax/transfers"
+          }
+        },
+        {
+          "batch1": {
+            "p50_ms": 0.055208,
+            "p95_ms": 0.05667945,
+            "batch_size": 1,
+            "repeats": 100,
+            "warmup": 30,
+            "scope": "loaded TorchScript CPU forward; resident inputs; no loading/softmax/transfers"
+          },
+          "batch64": {
+            "p50_ms": 1.9871664999999998,
+            "p95_ms": 2.29433925,
+            "batch_size": 64,
+            "repeats": 100,
+            "warmup": 30,
+            "scope": "loaded TorchScript CPU forward; resident inputs; no loading/softmax/transfers"
+          }
+        }
+      ],
+      "timing": {
+        "batch1": {
+          "p50_ms": 0.055083,
+          "p95_ms": 0.0562982,
+          "batch_size": 1,
+          "repeats": 100,
+          "warmup": 30,
+          "scope": "loaded TorchScript CPU forward; resident inputs; no loading/softmax/transfers",
+          "p95_round_range_ms": [
+            0.055504200000000004,
+            0.05667945
+          ]
+        },
+        "batch64": {
+          "p50_ms": 1.834104,
+          "p95_ms": 2.02140035,
+          "batch_size": 64,
+          "repeats": 100,
+          "warmup": 30,
+          "scope": "loaded TorchScript CPU forward; resident inputs; no loading/softmax/transfers",
+          "p95_round_range_ms": [
+            1.9993625,
+            2.29433925
+          ]
+        }
+      },
+      "test": {
+        "accuracy": 0.8951476077366813,
+        "macro_f1": 0.8968648267574838,
+        "ece_10bin": 0.02797447947433207,
+        "confusion_matrix": [
+          [
+            489,
+            1,
+            6,
+            0,
+            0,
+            0
+          ],
+          [
+            4,
+            430,
+            37,
+            0,
+            0,
+            0
+          ],
+          [
+            3,
+            0,
+            417,
+            0,
+            0,
+            0
+          ],
+          [
+            1,
+            3,
+            0,
+            368,
+            118,
+            1
+          ],
+          [
+            0,
+            0,
+            0,
+            92,
+            440,
+            0
+          ],
+          [
+            0,
+            27,
+            0,
+            16,
+            0,
+            494
+          ]
+        ]
+      },
+      "test_top1_agreement_with_original_float": 0.9575839837122497
+    },
+    {
+      "name": "compact_static_ptq_512",
+      "archive": "artifacts/quantization/compact_static_ptq_512/model.ts",
+      "archive_sha256": "de6cd1afbd10894e40a44f738b826b93b1bdf7631e2dc637b9f2aa8968f121c3",
+      "archive_bytes": 31343,
+      "layers": [
+        {
+          "name": "encoder.0",
+          "module": "ConvReLU1d",
+          "weight_shape": [
+            12,
+            9,
+            5
+          ],
+          "weight_dtype": "torch.qint8",
+          "quantized_weight": true,
+          "weight_qscheme": "torch.per_tensor_affine"
+        },
+        {
+          "name": "encoder.3",
+          "module": "ConvReLU1d",
+          "weight_shape": [
+            12,
+            12,
+            5
+          ],
+          "weight_dtype": "torch.qint8",
+          "quantized_weight": true,
+          "weight_qscheme": "torch.per_tensor_affine"
+        },
+        {
+          "name": "head.0",
+          "module": "LinearReLU",
+          "weight_shape": [
+            24,
+            96
+          ],
+          "weight_dtype": "torch.qint8",
+          "quantized_weight": true,
+          "weight_qscheme": "torch.per_tensor_affine"
+        },
+        {
+          "name": "head.3",
+          "module": "Linear",
+          "weight_shape": [
+            6,
+            24
+          ],
+          "weight_dtype": "torch.qint8",
+          "quantized_weight": true,
+          "weight_qscheme": "torch.per_tensor_affine"
+        }
+      ],
+      "history": [],
+      "archive_roundtrip_passed": true,
+      "validation": {
+        "accuracy": 0.9421128798842258,
+        "macro_f1": 0.9462233482841952,
+        "ece_10bin": 0.05266375227274667,
+        "confusion_matrix": [
+          [
+            221,
+            0,
+            0,
+            0,
+            0,
+            0
+          ],
+          [
+            7,
+            181,
+            2,
+            0,
+            0,
+            0
+          ],
+          [
+            0,
+            0,
+            178,
+            0,
+            0,
+            0
+          ],
+          [
+            0,
+            0,
+            0,
+            226,
+            10,
+            18
+          ],
+          [
+            0,
+            0,
+            0,
+            43,
+            213,
+            0
+          ],
+          [
+            0,
+            0,
+            0,
+            0,
+            0,
+            283
+          ]
+        ]
+      },
+      "outage_validation": {
+        "accuracy": 0.914616497829233,
+        "macro_f1": 0.9153918467978136,
+        "ece_10bin": 0.062210023812895754,
+        "confusion_matrix": [
+          [
+            202,
+            15,
+            4,
+            0,
+            0,
+            0
+          ],
+          [
+            25,
+            164,
+            1,
+            0,
+            0,
+            0
+          ],
+          [
+            0,
+            0,
+            178,
+            0,
+            0,
+            0
+          ],
+          [
+            0,
+            0,
+            0,
+            225,
+            10,
+            19
+          ],
+          [
+            0,
+            0,
+            0,
+            43,
+            213,
+            0
+          ],
+          [
+            0,
+            0,
+            0,
+            1,
+            0,
+            282
+          ]
+        ]
+      },
+      "timing_rounds": [
+        {
+          "batch1": {
+            "p50_ms": 0.0410835,
+            "p95_ms": 0.0505619,
+            "batch_size": 1,
+            "repeats": 100,
+            "warmup": 30,
+            "scope": "loaded TorchScript CPU forward; resident inputs; no loading/softmax/transfers"
+          },
+          "batch64": {
+            "p50_ms": 0.3959375,
+            "p95_ms": 0.47435029999999995,
+            "batch_size": 64,
+            "repeats": 100,
+            "warmup": 30,
+            "scope": "loaded TorchScript CPU forward; resident inputs; no loading/softmax/transfers"
+          }
+        },
+        {
+          "batch1": {
+            "p50_ms": 0.041479,
+            "p95_ms": 0.0493809,
+            "batch_size": 1,
+            "repeats": 100,
+            "warmup": 30,
+            "scope": "loaded TorchScript CPU forward; resident inputs; no loading/softmax/transfers"
+          },
+          "batch64": {
+            "p50_ms": 0.36695900000000004,
+            "p95_ms": 0.46793365000000003,
+            "batch_size": 64,
+            "repeats": 100,
+            "warmup": 30,
+            "scope": "loaded TorchScript CPU forward; resident inputs; no loading/softmax/transfers"
+          }
+        },
+        {
+          "batch1": {
+            "p50_ms": 0.0400835,
+            "p95_ms": 0.049995849999999994,
+            "batch_size": 1,
+            "repeats": 100,
+            "warmup": 30,
+            "scope": "loaded TorchScript CPU forward; resident inputs; no loading/softmax/transfers"
+          },
+          "batch64": {
+            "p50_ms": 0.381854,
+            "p95_ms": 0.4938694,
+            "batch_size": 64,
+            "repeats": 100,
+            "warmup": 30,
+            "scope": "loaded TorchScript CPU forward; resident inputs; no loading/softmax/transfers"
+          }
+        }
+      ],
+      "timing": {
+        "batch1": {
+          "p50_ms": 0.0410835,
+          "p95_ms": 0.049995849999999994,
+          "batch_size": 1,
+          "repeats": 100,
+          "warmup": 30,
+          "scope": "loaded TorchScript CPU forward; resident inputs; no loading/softmax/transfers",
+          "p95_round_range_ms": [
+            0.0493809,
+            0.0505619
+          ]
+        },
+        "batch64": {
+          "p50_ms": 0.381854,
+          "p95_ms": 0.47435029999999995,
+          "batch_size": 64,
+          "repeats": 100,
+          "warmup": 30,
+          "scope": "loaded TorchScript CPU forward; resident inputs; no loading/softmax/transfers",
+          "p95_round_range_ms": [
+            0.46793365000000003,
+            0.4938694
+          ]
+        }
+      },
+      "test": {
+        "accuracy": 0.8971835765184933,
+        "macro_f1": 0.8988820041106118,
+        "ece_10bin": 0.030299854159233815,
+        "confusion_matrix": [
+          [
+            491,
+            1,
+            4,
+            0,
+            0,
+            0
+          ],
+          [
+            4,
+            432,
+            35,
+            0,
+            0,
+            0
+          ],
+          [
+            5,
+            0,
+            415,
+            0,
+            0,
+            0
+          ],
+          [
+            1,
+            3,
+            0,
+            370,
+            116,
+            1
+          ],
+          [
+            0,
+            0,
+            0,
+            90,
+            442,
+            0
+          ],
+          [
+            0,
+            27,
+            0,
+            16,
+            0,
+            494
+          ]
+        ]
+      },
+      "test_top1_agreement_with_original_float": 0.9555480149304377
+    }
+  ],
+  "limits": "One seed; CPU INT8 backend, float normalization/output and graph boundaries remain.",
+  "selected": "compact_static_ptq_512",
+  "minimum_validation_f1": 0.9401672532197752
+}

@@ -1,5 +1,9 @@
 # 01 · Edge Sense
 
+[Executed summary notebook](../../notebooks/01_edge_sense.ipynb)
+
+[Pruning experiment](../../docs/PRUNING.md): global magnitude pruning and physical channel compaction, with masked fine-tuning, export checks, and measured size/quality/timing comparisons. Run `edge-prune --epochs 5` after generating the floating distilled checkpoint.
+
 **Efficient activity recognition from accelerometer and gyroscope windows.**
 
 Build a real-data pipeline, train a multistream teacher and compact baselines,
@@ -49,3 +53,24 @@ channel order. Weight-only compression leaves activations floating point.
 
 The model classifies six activities from a phone near the waist. It is not a
 medical device, a general movement detector, or validated for arbitrary wearables.
+
+## Optional CUDA / Apple GPU inference
+
+After generating the floating checkpoint and preparing the data:
+
+```bash
+edge-infer --checkpoint artifacts/edge/seed-7/distilled/model.pt --device auto --batch-size 64
+```
+
+`auto` selects CUDA, then Apple MPS, then CPU. Use `--device cuda` to require
+NVIDIA execution, `--device mps` for an Apple GPU, or `--device cpu` for CPU.
+CUDA requires a compatible CUDA-enabled PyTorch build and GPU driver. The
+PyTorch 2.2.2 study pin may not support recent GPU architectures; use a separately
+validated environment when needed. Dynamic INT8 checkpoints remain CPU-only.
+
+The command measures floating-point forward passes with inputs already on the
+device and synchronization around each call. It reports batch p50/p95,
+throughput, validation classification metrics, and agreement against a CPU
+reference. Choose batch size 1 for single-window calls. Output is saved to
+`artifacts/inference/latest.json`; existing study reports are unchanged. The
+[notebook](../../notebooks/01_edge_sense.ipynb) includes a smaller interactive run.

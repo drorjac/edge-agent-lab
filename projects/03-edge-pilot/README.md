@@ -1,5 +1,7 @@
 # 03 · Edge Pilot
 
+[Executed summary notebook](../../notebooks/03_edge_pilot.ipynb)
+
 **An engineering workflow that selects a compact model under measured constraints.**
 
 The controller combines data quality, experiment history, tool-based measurements,

@@ -1,0 +1,2808 @@
+{
+  "source_checkpoint": "artifacts/edge/seed-7/distilled/model.pt",
+  "source_sha256": "d207e077aa5751f87c518590e3afdc8e680bd71220900ee687217bbe61c1f0ab",
+  "dataset_sha256": "c00b803081a5c797cd5e4b83700a9810b38d53d9d84e01917e090e1fdbc81031",
+  "environment": {
+    "utc": "2026-10-22T09:32:02.846068+00:00",
+    "python": "3.12.9",
+    "platform": "macOS-13.4-arm64-arm-64bit",
+    "processor": "arm",
+    "torch": "2.2.2",
+    "numpy": "1.26.4",
+    "threads": 4,
+    "backend": "cpu"
+  },
+  "seed": 7,
+  "fine_tuning_epochs": 5,
+  "selection_split": "validation",
+  "test_used_for_selection": false,
+  "selection_rule": "smallest state within 0.02 validation macro F1 of original dense source",
+  "candidates": [
+    {
+      "name": "dense_original",
+      "details": {},
+      "before_finetuning_validation": {
+        "accuracy": 0.9558610709117221,
+        "macro_f1": 0.9601672532197753,
+        "ece_10bin": 0.03096061444662068,
+        "confusion_matrix": [
+          [
+            220,
+            0,
+            1,
+            0,
+            0,
+            0
+          ],
+          [
+            0,
+            190,
+            0,
+            0,
+            0,
+            0
+          ],
+          [
+            0,
+            0,
+            178,
+            0,
+            0,
+            0
+          ],
+          [
+            0,
+            0,
+            0,
+            231,
+            8,
+            15
+          ],
+          [
+            0,
+            0,
+            0,
+            37,
+            219,
+            0
+          ],
+          [
+            0,
+            0,
+            0,
+            0,
+            0,
+            283
+          ]
+        ]
+      },
+      "validation": {
+        "accuracy": 0.9558610709117221,
+        "macro_f1": 0.9601672532197753,
+        "ece_10bin": 0.03096061444662068,
+        "confusion_matrix": [
+          [
+            220,
+            0,
+            1,
+            0,
+            0,
+            0
+          ],
+          [
+            0,
+            190,
+            0,
+            0,
+            0,
+            0
+          ],
+          [
+            0,
+            0,
+            178,
+            0,
+            0,
+            0
+          ],
+          [
+            0,
+            0,
+            0,
+            231,
+            8,
+            15
+          ],
+          [
+            0,
+            0,
+            0,
+            37,
+            219,
+            0
+          ],
+          [
+            0,
+            0,
+            0,
+            0,
+            0,
+            283
+          ]
+        ]
+      },
+      "outage_validation": {
+        "accuracy": 0.9334298118668596,
+        "macro_f1": 0.9351051321036065,
+        "ece_10bin": 0.04479928459168863,
+        "confusion_matrix": [
+          [
+            202,
+            19,
+            0,
+            0,
+            0,
+            0
+          ],
+          [
+            12,
+            178,
+            0,
+            0,
+            0,
+            0
+          ],
+          [
+            0,
+            0,
+            178,
+            0,
+            0,
+            0
+          ],
+          [
+            0,
+            0,
+            0,
+            229,
+            10,
+            15
+          ],
+          [
+            0,
+            0,
+            0,
+            36,
+            220,
+            0
+          ],
+          [
+            0,
+            0,
+            0,
+            0,
+            0,
+            283
+          ]
+        ]
+      },
+      "parameters": 13662,
+      "weight_sparsity": 0.0,
+      "checkpoint_bytes": 61034,
+      "checkpoint_sha256": "d207e077aa5751f87c518590e3afdc8e680bd71220900ee687217bbe61c1f0ab",
+      "checkpoint": "artifacts/pruning/dense_original/model.pt",
+      "cpu_batch1": {
+        "p50_ms": 0.085375,
+        "p95_ms": 0.08804405,
+        "repeats": 200,
+        "warmup": 30,
+        "batch_size": 1,
+        "state_dict_bytes": 61210,
+        "backend": "pytorch_cpu",
+        "threads": 4,
+        "p95_round_range_ms": [
+          0.08716905,
+          0.0880902
+        ],
+        "summary": "median across interleaved post-training timing rounds"
+      },
+      "history": [],
+      "seconds": 0.2241295830172021,
+      "device_batch64": {
+        "cpu": {
+          "device": "cpu",
+          "hardware": "CPU",
+          "torch": "2.2.2",
+          "cuda_runtime": null,
+          "cpu_threads": 4,
+          "dtype": "float32",
+          "rows": 256,
+          "batch_size": 64,
+          "repeats": 50,
+          "warmup": 30,
+          "batch_p50_ms": 1.9930620000000001,
+          "batch_p95_ms": 2.20355435,
+          "windows_per_second_at_p50": 32111.39442726819,
+          "timing_scope": "resident-input forward; includes dispatch and synchronization; no transfers",
+          "summary": "median across interleaved post-training timing rounds"
+        },
+        "mps": {
+          "device": "mps",
+          "hardware": "Apple GPU (MPS)",
+          "torch": "2.2.2",
+          "cuda_runtime": null,
+          "cpu_threads": 4,
+          "dtype": "float32",
+          "rows": 256,
+          "batch_size": 64,
+          "repeats": 50,
+          "warmup": 30,
+          "batch_p50_ms": 1.038896,
+          "batch_p95_ms": 1.08370625,
+          "windows_per_second_at_p50": 61603.856401410725,
+          "timing_scope": "resident-input forward; includes dispatch and synchronization; no transfers",
+          "summary": "median across interleaved post-training timing rounds"
+        }
+      },
+      "test": {
+        "accuracy": 0.9138106549032915,
+        "macro_f1": 0.9138861429578716,
+        "ece_10bin": 0.05650083792990328,
+        "confusion_matrix": [
+          [
+            488,
+            3,
+            5,
+            0,
+            0,
+            0
+          ],
+          [
+            0,
+            437,
+            34,
+            0,
+            0,
+            0
+          ],
+          [
+            2,
+            3,
+            415,
+            0,
+            0,
+            0
+          ],
+          [
+            0,
+            25,
+            0,
+            378,
+            88,
+            0
+          ],
+          [
+            0,
+            0,
+            0,
+            93,
+            439,
+            0
+          ],
+          [
+            0,
+            1,
+            0,
+            0,
+            0,
+            536
+          ]
+        ]
+      },
+      "timing_rounds": [
+        {
+          "cpu_batch1": {
+            "p50_ms": 0.084959,
+            "p95_ms": 0.08716905,
+            "repeats": 200,
+            "warmup": 30,
+            "batch_size": 1,
+            "state_dict_bytes": 61210,
+            "backend": "pytorch_cpu",
+            "threads": 4
+          },
+          "device_batch64": {
+            "cpu": {
+              "device": "cpu",
+              "hardware": "CPU",
+              "torch": "2.2.2",
+              "cuda_runtime": null,
+              "cpu_threads": 4,
+              "dtype": "float32",
+              "rows": 256,
+              "batch_size": 64,
+              "repeats": 50,
+              "warmup": 30,
+              "batch_p50_ms": 1.9930620000000001,
+              "batch_p95_ms": 2.1974375,
+              "windows_per_second_at_p50": 32111.39442726819,
+              "timing_scope": "resident-input forward; includes dispatch and synchronization; no transfers"
+            },
+            "mps": {
+              "device": "mps",
+              "hardware": "Apple GPU (MPS)",
+              "torch": "2.2.2",
+              "cuda_runtime": null,
+              "cpu_threads": 4,
+              "dtype": "float32",
+              "rows": 256,
+              "batch_size": 64,
+              "repeats": 50,
+              "warmup": 30,
+              "batch_p50_ms": 1.03975,
+              "batch_p95_ms": 1.0869377999999998,
+              "windows_per_second_at_p50": 61553.25799471027,
+              "timing_scope": "resident-input forward; includes dispatch and synchronization; no transfers"
+            }
+          }
+        },
+        {
+          "cpu_batch1": {
+            "p50_ms": 0.085375,
+            "p95_ms": 0.0880902,
+            "repeats": 200,
+            "warmup": 30,
+            "batch_size": 1,
+            "state_dict_bytes": 61210,
+            "backend": "pytorch_cpu",
+            "threads": 4
+          },
+          "device_batch64": {
+            "cpu": {
+              "device": "cpu",
+              "hardware": "CPU",
+              "torch": "2.2.2",
+              "cuda_runtime": null,
+              "cpu_threads": 4,
+              "dtype": "float32",
+              "rows": 256,
+              "batch_size": 64,
+              "repeats": 50,
+              "warmup": 30,
+              "batch_p50_ms": 2.0147705,
+              "batch_p95_ms": 2.20355435,
+              "windows_per_second_at_p50": 31765.40454607609,
+              "timing_scope": "resident-input forward; includes dispatch and synchronization; no transfers"
+            },
+            "mps": {
+              "device": "mps",
+              "hardware": "Apple GPU (MPS)",
+              "torch": "2.2.2",
+              "cuda_runtime": null,
+              "cpu_threads": 4,
+              "dtype": "float32",
+              "rows": 256,
+              "batch_size": 64,
+              "repeats": 50,
+              "warmup": 30,
+              "batch_p50_ms": 1.038729,
+              "batch_p95_ms": 1.08370625,
+              "windows_per_second_at_p50": 61613.760663272136,
+              "timing_scope": "resident-input forward; includes dispatch and synchronization; no transfers"
+            }
+          }
+        },
+        {
+          "cpu_batch1": {
+            "p50_ms": 0.0856045,
+            "p95_ms": 0.08804405,
+            "repeats": 200,
+            "warmup": 30,
+            "batch_size": 1,
+            "state_dict_bytes": 61210,
+            "backend": "pytorch_cpu",
+            "threads": 4
+          },
+          "device_batch64": {
+            "cpu": {
+              "device": "cpu",
+              "hardware": "CPU",
+              "torch": "2.2.2",
+              "cuda_runtime": null,
+              "cpu_threads": 4,
+              "dtype": "float32",
+              "rows": 256,
+              "batch_size": 64,
+              "repeats": 50,
+              "warmup": 30,
+              "batch_p50_ms": 1.8948955,
+              "batch_p95_ms": 2.25988545,
+              "windows_per_second_at_p50": 33774.94959484573,
+              "timing_scope": "resident-input forward; includes dispatch and synchronization; no transfers"
+            },
+            "mps": {
+              "device": "mps",
+              "hardware": "Apple GPU (MPS)",
+              "torch": "2.2.2",
+              "cuda_runtime": null,
+              "cpu_threads": 4,
+              "dtype": "float32",
+              "rows": 256,
+              "batch_size": 64,
+              "repeats": 50,
+              "warmup": 30,
+              "batch_p50_ms": 1.038896,
+              "batch_p95_ms": 1.08061005,
+              "windows_per_second_at_p50": 61603.856401410725,
+              "timing_scope": "resident-input forward; includes dispatch and synchronization; no transfers"
+            }
+          }
+        }
+      ]
+    },
+    {
+      "name": "dense_finetuned",
+      "details": {},
+      "before_finetuning_validation": {
+        "accuracy": 0.9558610709117221,
+        "macro_f1": 0.9601672532197753,
+        "ece_10bin": 0.03096061444662068,
+        "confusion_matrix": [
+          [
+            220,
+            0,
+            1,
+            0,
+            0,
+            0
+          ],
+          [
+            0,
+            190,
+            0,
+            0,
+            0,
+            0
+          ],
+          [
+            0,
+            0,
+            178,
+            0,
+            0,
+            0
+          ],
+          [
+            0,
+            0,
+            0,
+            231,
+            8,
+            15
+          ],
+          [
+            0,
+            0,
+            0,
+            37,
+            219,
+            0
+          ],
+          [
+            0,
+            0,
+            0,
+            0,
+            0,
+            283
+          ]
+        ]
+      },
+      "validation": {
+        "accuracy": 0.9558610709117221,
+        "macro_f1": 0.9601672532197753,
+        "ece_10bin": 0.03096061444662068,
+        "confusion_matrix": [
+          [
+            220,
+            0,
+            1,
+            0,
+            0,
+            0
+          ],
+          [
+            0,
+            190,
+            0,
+            0,
+            0,
+            0
+          ],
+          [
+            0,
+            0,
+            178,
+            0,
+            0,
+            0
+          ],
+          [
+            0,
+            0,
+            0,
+            231,
+            8,
+            15
+          ],
+          [
+            0,
+            0,
+            0,
+            37,
+            219,
+            0
+          ],
+          [
+            0,
+            0,
+            0,
+            0,
+            0,
+            283
+          ]
+        ]
+      },
+      "outage_validation": {
+        "accuracy": 0.9334298118668596,
+        "macro_f1": 0.9351051321036065,
+        "ece_10bin": 0.04479928459168863,
+        "confusion_matrix": [
+          [
+            202,
+            19,
+            0,
+            0,
+            0,
+            0
+          ],
+          [
+            12,
+            178,
+            0,
+            0,
+            0,
+            0
+          ],
+          [
+            0,
+            0,
+            178,
+            0,
+            0,
+            0
+          ],
+          [
+            0,
+            0,
+            0,
+            229,
+            10,
+            15
+          ],
+          [
+            0,
+            0,
+            0,
+            36,
+            220,
+            0
+          ],
+          [
+            0,
+            0,
+            0,
+            0,
+            0,
+            283
+          ]
+        ]
+      },
+      "parameters": 13662,
+      "weight_sparsity": 0.0,
+      "checkpoint_bytes": 61034,
+      "checkpoint_sha256": "d207e077aa5751f87c518590e3afdc8e680bd71220900ee687217bbe61c1f0ab",
+      "checkpoint": "artifacts/pruning/dense_finetuned/model.pt",
+      "cpu_batch1": {
+        "p50_ms": 0.085292,
+        "p95_ms": 0.08792114999999999,
+        "repeats": 200,
+        "warmup": 30,
+        "batch_size": 1,
+        "state_dict_bytes": 61210,
+        "backend": "pytorch_cpu",
+        "threads": 4,
+        "p95_round_range_ms": [
+          0.0873771,
+          0.08813334999999999
+        ],
+        "summary": "median across interleaved post-training timing rounds"
+      },
+      "history": [
+        {
+          "epoch": 1,
+          "validation_macro_f1": 0.9557220047882778
+        },
+        {
+          "epoch": 2,
+          "validation_macro_f1": 0.9469583490379648
+        },
+        {
+          "epoch": 3,
+          "validation_macro_f1": 0.9566200501696445
+        },
+        {
+          "epoch": 4,
+          "validation_macro_f1": 0.9547359318665456
+        },
+        {
+          "epoch": 5,
+          "validation_macro_f1": 0.9506829836942366
+        }
+      ],
+      "seconds": 3.076726333005354,
+      "device_batch64": {
+        "cpu": {
+          "device": "cpu",
+          "hardware": "CPU",
+          "torch": "2.2.2",
+          "cuda_runtime": null,
+          "cpu_threads": 4,
+          "dtype": "float32",
+          "rows": 256,
+          "batch_size": 64,
+          "repeats": 50,
+          "warmup": 30,
+          "batch_p50_ms": 1.98175,
+          "batch_p95_ms": 2.2321481,
+          "windows_per_second_at_p50": 32294.689037466887,
+          "timing_scope": "resident-input forward; includes dispatch and synchronization; no transfers",
+          "summary": "median across interleaved post-training timing rounds"
+        },
+        "mps": {
+          "device": "mps",
+          "hardware": "Apple GPU (MPS)",
+          "torch": "2.2.2",
+          "cuda_runtime": null,
+          "cpu_threads": 4,
+          "dtype": "float32",
+          "rows": 256,
+          "batch_size": 64,
+          "repeats": 50,
+          "warmup": 30,
+          "batch_p50_ms": 1.0411670000000002,
+          "batch_p95_ms": 1.07868925,
+          "windows_per_second_at_p50": 61469.48568289236,
+          "timing_scope": "resident-input forward; includes dispatch and synchronization; no transfers",
+          "summary": "median across interleaved post-training timing rounds"
+        }
+      },
+      "test": {
+        "accuracy": 0.9138106549032915,
+        "macro_f1": 0.9138861429578716,
+        "ece_10bin": 0.05650083792990328,
+        "confusion_matrix": [
+          [
+            488,
+            3,
+            5,
+            0,
+            0,
+            0
+          ],
+          [
+            0,
+            437,
+            34,
+            0,
+            0,
+            0
+          ],
+          [
+            2,
+            3,
+            415,
+            0,
+            0,
+            0
+          ],
+          [
+            0,
+            25,
+            0,
+            378,
+            88,
+            0
+          ],
+          [
+            0,
+            0,
+            0,
+            93,
+            439,
+            0
+          ],
+          [
+            0,
+            1,
+            0,
+            0,
+            0,
+            536
+          ]
+        ]
+      },
+      "timing_rounds": [
+        {
+          "cpu_batch1": {
+            "p50_ms": 0.0852295,
+            "p95_ms": 0.0873771,
+            "repeats": 200,
+            "warmup": 30,
+            "batch_size": 1,
+            "state_dict_bytes": 61210,
+            "backend": "pytorch_cpu",
+            "threads": 4
+          },
+          "device_batch64": {
+            "cpu": {
+              "device": "cpu",
+              "hardware": "CPU",
+              "torch": "2.2.2",
+              "cuda_runtime": null,
+              "cpu_threads": 4,
+              "dtype": "float32",
+              "rows": 256,
+              "batch_size": 64,
+              "repeats": 50,
+              "warmup": 30,
+              "batch_p50_ms": 2.013875,
+              "batch_p95_ms": 2.3094877999999994,
+              "windows_per_second_at_p50": 31779.529513996647,
+              "timing_scope": "resident-input forward; includes dispatch and synchronization; no transfers"
+            },
+            "mps": {
+              "device": "mps",
+              "hardware": "Apple GPU (MPS)",
+              "torch": "2.2.2",
+              "cuda_runtime": null,
+              "cpu_threads": 4,
+              "dtype": "float32",
+              "rows": 256,
+              "batch_size": 64,
+              "repeats": 50,
+              "warmup": 30,
+              "batch_p50_ms": 1.065166,
+              "batch_p95_ms": 1.14899785,
+              "windows_per_second_at_p50": 60084.53142514875,
+              "timing_scope": "resident-input forward; includes dispatch and synchronization; no transfers"
+            }
+          }
+        },
+        {
+          "cpu_batch1": {
+            "p50_ms": 0.085667,
+            "p95_ms": 0.08813334999999999,
+            "repeats": 200,
+            "warmup": 30,
+            "batch_size": 1,
+            "state_dict_bytes": 61210,
+            "backend": "pytorch_cpu",
+            "threads": 4
+          },
+          "device_batch64": {
+            "cpu": {
+              "device": "cpu",
+              "hardware": "CPU",
+              "torch": "2.2.2",
+              "cuda_runtime": null,
+              "cpu_threads": 4,
+              "dtype": "float32",
+              "rows": 256,
+              "batch_size": 64,
+              "repeats": 50,
+              "warmup": 30,
+              "batch_p50_ms": 1.98175,
+              "batch_p95_ms": 2.16511615,
+              "windows_per_second_at_p50": 32294.689037466887,
+              "timing_scope": "resident-input forward; includes dispatch and synchronization; no transfers"
+            },
+            "mps": {
+              "device": "mps",
+              "hardware": "Apple GPU (MPS)",
+              "torch": "2.2.2",
+              "cuda_runtime": null,
+              "cpu_threads": 4,
+              "dtype": "float32",
+              "rows": 256,
+              "batch_size": 64,
+              "repeats": 50,
+              "warmup": 30,
+              "batch_p50_ms": 1.0315835,
+              "batch_p95_ms": 1.06766685,
+              "windows_per_second_at_p50": 62040.542525156714,
+              "timing_scope": "resident-input forward; includes dispatch and synchronization; no transfers"
+            }
+          }
+        },
+        {
+          "cpu_batch1": {
+            "p50_ms": 0.085292,
+            "p95_ms": 0.08792114999999999,
+            "repeats": 200,
+            "warmup": 30,
+            "batch_size": 1,
+            "state_dict_bytes": 61210,
+            "backend": "pytorch_cpu",
+            "threads": 4
+          },
+          "device_batch64": {
+            "cpu": {
+              "device": "cpu",
+              "hardware": "CPU",
+              "torch": "2.2.2",
+              "cuda_runtime": null,
+              "cpu_threads": 4,
+              "dtype": "float32",
+              "rows": 256,
+              "batch_size": 64,
+              "repeats": 50,
+              "warmup": 30,
+              "batch_p50_ms": 1.9558335,
+              "batch_p95_ms": 2.2321481,
+              "windows_per_second_at_p50": 32722.62183871991,
+              "timing_scope": "resident-input forward; includes dispatch and synchronization; no transfers"
+            },
+            "mps": {
+              "device": "mps",
+              "hardware": "Apple GPU (MPS)",
+              "torch": "2.2.2",
+              "cuda_runtime": null,
+              "cpu_threads": 4,
+              "dtype": "float32",
+              "rows": 256,
+              "batch_size": 64,
+              "repeats": 50,
+              "warmup": 30,
+              "batch_p50_ms": 1.0411670000000002,
+              "batch_p95_ms": 1.07868925,
+              "windows_per_second_at_p50": 61469.48568289236,
+              "timing_scope": "resident-input forward; includes dispatch and synchronization; no transfers"
+            }
+          }
+        }
+      ]
+    },
+    {
+      "name": "magnitude_50",
+      "details": {
+        "method": "global L1 unstructured",
+        "target_weight_sparsity": 0.5
+      },
+      "before_finetuning_validation": {
+        "accuracy": 0.9464544138929089,
+        "macro_f1": 0.9485243368009021,
+        "ece_10bin": 0.030857800316017002,
+        "confusion_matrix": [
+          [
+            218,
+            3,
+            0,
+            0,
+            0,
+            0
+          ],
+          [
+            5,
+            185,
+            0,
+            0,
+            0,
+            0
+          ],
+          [
+            0,
+            8,
+            170,
+            0,
+            0,
+            0
+          ],
+          [
+            0,
+            0,
+            0,
+            227,
+            12,
+            15
+          ],
+          [
+            0,
+            0,
+            0,
+            29,
+            227,
+            0
+          ],
+          [
+            2,
+            0,
+            0,
+            0,
+            0,
+            281
+          ]
+        ]
+      },
+      "validation": {
+        "accuracy": 0.9507959479015919,
+        "macro_f1": 0.955261324767351,
+        "ece_10bin": 0.02875299572772121,
+        "confusion_matrix": [
+          [
+            221,
+            0,
+            0,
+            0,
+            0,
+            0
+          ],
+          [
+            3,
+            187,
+            0,
+            0,
+            0,
+            0
+          ],
+          [
+            0,
+            0,
+            178,
+            0,
+            0,
+            0
+          ],
+          [
+            0,
+            0,
+            0,
+            232,
+            7,
+            15
+          ],
+          [
+            0,
+            0,
+            0,
+            43,
+            213,
+            0
+          ],
+          [
+            0,
+            0,
+            0,
+            0,
+            0,
+            283
+          ]
+        ]
+      },
+      "outage_validation": {
+        "accuracy": 0.9261939218523878,
+        "macro_f1": 0.927374505007215,
+        "ece_10bin": 0.03514014078808246,
+        "confusion_matrix": [
+          [
+            198,
+            22,
+            1,
+            0,
+            0,
+            0
+          ],
+          [
+            15,
+            175,
+            0,
+            0,
+            0,
+            0
+          ],
+          [
+            0,
+            0,
+            178,
+            0,
+            0,
+            0
+          ],
+          [
+            0,
+            0,
+            0,
+            231,
+            8,
+            15
+          ],
+          [
+            0,
+            0,
+            0,
+            41,
+            215,
+            0
+          ],
+          [
+            0,
+            0,
+            0,
+            0,
+            0,
+            283
+          ]
+        ]
+      },
+      "parameters": 13662,
+      "weight_sparsity": 0.5,
+      "checkpoint_bytes": 61034,
+      "checkpoint_sha256": "60a7ef8f4b1dd84b0cfc0256bf1d29309d3146cf1576ba99ac140c0a264dd967",
+      "checkpoint": "artifacts/pruning/magnitude_50/model.pt",
+      "cpu_batch1": {
+        "p50_ms": 0.0857295,
+        "p95_ms": 0.08855654999999998,
+        "repeats": 200,
+        "warmup": 30,
+        "batch_size": 1,
+        "state_dict_bytes": 61210,
+        "backend": "pytorch_cpu",
+        "threads": 4,
+        "p95_round_range_ms": [
+          0.088125,
+          0.19015034999999975
+        ],
+        "summary": "median across interleaved post-training timing rounds"
+      },
+      "history": [
+        {
+          "epoch": 1,
+          "validation_macro_f1": 0.9487769922429591
+        },
+        {
+          "epoch": 2,
+          "validation_macro_f1": 0.9476646198259046
+        },
+        {
+          "epoch": 3,
+          "validation_macro_f1": 0.9546012584919182
+        },
+        {
+          "epoch": 4,
+          "validation_macro_f1": 0.9530861655286454
+        },
+        {
+          "epoch": 5,
+          "validation_macro_f1": 0.955261324767351
+        }
+      ],
+      "seconds": 2.3521658339886926,
+      "device_batch64": {
+        "cpu": {
+          "device": "cpu",
+          "hardware": "CPU",
+          "torch": "2.2.2",
+          "cuda_runtime": null,
+          "cpu_threads": 4,
+          "dtype": "float32",
+          "rows": 256,
+          "batch_size": 64,
+          "repeats": 50,
+          "warmup": 30,
+          "batch_p50_ms": 1.9138959999999998,
+          "batch_p95_ms": 2.241742,
+          "windows_per_second_at_p50": 33439.64353339994,
+          "timing_scope": "resident-input forward; includes dispatch and synchronization; no transfers",
+          "summary": "median across interleaved post-training timing rounds"
+        },
+        "mps": {
+          "device": "mps",
+          "hardware": "Apple GPU (MPS)",
+          "torch": "2.2.2",
+          "cuda_runtime": null,
+          "cpu_threads": 4,
+          "dtype": "float32",
+          "rows": 256,
+          "batch_size": 64,
+          "repeats": 50,
+          "warmup": 30,
+          "batch_p50_ms": 1.0487085,
+          "batch_p95_ms": 1.08089375,
+          "windows_per_second_at_p50": 61027.44470937348,
+          "timing_scope": "resident-input forward; includes dispatch and synchronization; no transfers",
+          "summary": "median across interleaved post-training timing rounds"
+        }
+      },
+      "test": {
+        "accuracy": 0.9202578893790295,
+        "macro_f1": 0.9208756931417842,
+        "ece_10bin": 0.036372666909891216,
+        "confusion_matrix": [
+          [
+            493,
+            1,
+            2,
+            0,
+            0,
+            0
+          ],
+          [
+            0,
+            439,
+            32,
+            0,
+            0,
+            0
+          ],
+          [
+            6,
+            5,
+            409,
+            0,
+            0,
+            0
+          ],
+          [
+            0,
+            9,
+            0,
+            402,
+            80,
+            0
+          ],
+          [
+            0,
+            0,
+            0,
+            100,
+            432,
+            0
+          ],
+          [
+            0,
+            0,
+            0,
+            0,
+            0,
+            537
+          ]
+        ]
+      },
+      "timing_rounds": [
+        {
+          "cpu_batch1": {
+            "p50_ms": 0.0857295,
+            "p95_ms": 0.08855654999999998,
+            "repeats": 200,
+            "warmup": 30,
+            "batch_size": 1,
+            "state_dict_bytes": 61210,
+            "backend": "pytorch_cpu",
+            "threads": 4
+          },
+          "device_batch64": {
+            "cpu": {
+              "device": "cpu",
+              "hardware": "CPU",
+              "torch": "2.2.2",
+              "cuda_runtime": null,
+              "cpu_threads": 4,
+              "dtype": "float32",
+              "rows": 256,
+              "batch_size": 64,
+              "repeats": 50,
+              "warmup": 30,
+              "batch_p50_ms": 1.9138959999999998,
+              "batch_p95_ms": 2.19502675,
+              "windows_per_second_at_p50": 33439.64353339994,
+              "timing_scope": "resident-input forward; includes dispatch and synchronization; no transfers"
+            },
+            "mps": {
+              "device": "mps",
+              "hardware": "Apple GPU (MPS)",
+              "torch": "2.2.2",
+              "cuda_runtime": null,
+              "cpu_threads": 4,
+              "dtype": "float32",
+              "rows": 256,
+              "batch_size": 64,
+              "repeats": 50,
+              "warmup": 30,
+              "batch_p50_ms": 1.044854,
+              "batch_p95_ms": 1.08089375,
+              "windows_per_second_at_p50": 61252.57691505225,
+              "timing_scope": "resident-input forward; includes dispatch and synchronization; no transfers"
+            }
+          }
+        },
+        {
+          "cpu_batch1": {
+            "p50_ms": 0.08975,
+            "p95_ms": 0.19015034999999975,
+            "repeats": 200,
+            "warmup": 30,
+            "batch_size": 1,
+            "state_dict_bytes": 61210,
+            "backend": "pytorch_cpu",
+            "threads": 4
+          },
+          "device_batch64": {
+            "cpu": {
+              "device": "cpu",
+              "hardware": "CPU",
+              "torch": "2.2.2",
+              "cuda_runtime": null,
+              "cpu_threads": 4,
+              "dtype": "float32",
+              "rows": 256,
+              "batch_size": 64,
+              "repeats": 50,
+              "warmup": 30,
+              "batch_p50_ms": 1.9146874999999999,
+              "batch_p95_ms": 2.241742,
+              "windows_per_second_at_p50": 33425.82014036233,
+              "timing_scope": "resident-input forward; includes dispatch and synchronization; no transfers"
+            },
+            "mps": {
+              "device": "mps",
+              "hardware": "Apple GPU (MPS)",
+              "torch": "2.2.2",
+              "cuda_runtime": null,
+              "cpu_threads": 4,
+              "dtype": "float32",
+              "rows": 256,
+              "batch_size": 64,
+              "repeats": 50,
+              "warmup": 30,
+              "batch_p50_ms": 1.0512495,
+              "batch_p95_ms": 1.1177270499999998,
+              "windows_per_second_at_p50": 60879.93383112192,
+              "timing_scope": "resident-input forward; includes dispatch and synchronization; no transfers"
+            }
+          }
+        },
+        {
+          "cpu_batch1": {
+            "p50_ms": 0.0856875,
+            "p95_ms": 0.088125,
+            "repeats": 200,
+            "warmup": 30,
+            "batch_size": 1,
+            "state_dict_bytes": 61210,
+            "backend": "pytorch_cpu",
+            "threads": 4
+          },
+          "device_batch64": {
+            "cpu": {
+              "device": "cpu",
+              "hardware": "CPU",
+              "torch": "2.2.2",
+              "cuda_runtime": null,
+              "cpu_threads": 4,
+              "dtype": "float32",
+              "rows": 256,
+              "batch_size": 64,
+              "repeats": 50,
+              "warmup": 30,
+              "batch_p50_ms": 1.8981664999999999,
+              "batch_p95_ms": 2.27550625,
+              "windows_per_second_at_p50": 33716.74718735159,
+              "timing_scope": "resident-input forward; includes dispatch and synchronization; no transfers"
+            },
+            "mps": {
+              "device": "mps",
+              "hardware": "Apple GPU (MPS)",
+              "torch": "2.2.2",
+              "cuda_runtime": null,
+              "cpu_threads": 4,
+              "dtype": "float32",
+              "rows": 256,
+              "batch_size": 64,
+              "repeats": 50,
+              "warmup": 30,
+              "batch_p50_ms": 1.0487085,
+              "batch_p95_ms": 1.08071035,
+              "windows_per_second_at_p50": 61027.44470937348,
+              "timing_scope": "resident-input forward; includes dispatch and synchronization; no transfers"
+            }
+          }
+        }
+      ]
+    },
+    {
+      "name": "magnitude_70",
+      "details": {
+        "method": "global L1 unstructured",
+        "target_weight_sparsity": 0.7
+      },
+      "before_finetuning_validation": {
+        "accuracy": 0.7474674384949349,
+        "macro_f1": 0.7341595890737983,
+        "ece_10bin": 0.09434083138637019,
+        "confusion_matrix": [
+          [
+            89,
+            18,
+            0,
+            37,
+            77,
+            0
+          ],
+          [
+            1,
+            178,
+            0,
+            0,
+            11,
+            0
+          ],
+          [
+            0,
+            65,
+            105,
+            8,
+            0,
+            0
+          ],
+          [
+            0,
+            0,
+            0,
+            196,
+            58,
+            0
+          ],
+          [
+            0,
+            0,
+            0,
+            0,
+            256,
+            0
+          ],
+          [
+            38,
+            0,
+            2,
+            34,
+            0,
+            209
+          ]
+        ]
+      },
+      "validation": {
+        "accuracy": 0.9493487698986975,
+        "macro_f1": 0.9530619929446122,
+        "ece_10bin": 0.022143161762640556,
+        "confusion_matrix": [
+          [
+            221,
+            0,
+            0,
+            0,
+            0,
+            0
+          ],
+          [
+            8,
+            182,
+            0,
+            0,
+            0,
+            0
+          ],
+          [
+            0,
+            0,
+            178,
+            0,
+            0,
+            0
+          ],
+          [
+            0,
+            0,
+            0,
+            234,
+            8,
+            12
+          ],
+          [
+            0,
+            0,
+            0,
+            42,
+            214,
+            0
+          ],
+          [
+            0,
+            0,
+            0,
+            0,
+            0,
+            283
+          ]
+        ]
+      },
+      "outage_validation": {
+        "accuracy": 0.914616497829233,
+        "macro_f1": 0.9141761764847723,
+        "ece_10bin": 0.02674672689003125,
+        "confusion_matrix": [
+          [
+            190,
+            23,
+            8,
+            0,
+            0,
+            0
+          ],
+          [
+            19,
+            169,
+            0,
+            0,
+            2,
+            0
+          ],
+          [
+            0,
+            0,
+            178,
+            0,
+            0,
+            0
+          ],
+          [
+            0,
+            0,
+            0,
+            229,
+            10,
+            15
+          ],
+          [
+            0,
+            0,
+            0,
+            41,
+            215,
+            0
+          ],
+          [
+            0,
+            0,
+            0,
+            0,
+            0,
+            283
+          ]
+        ]
+      },
+      "parameters": 13662,
+      "weight_sparsity": 0.7000148544266191,
+      "checkpoint_bytes": 61034,
+      "checkpoint_sha256": "05d794ecf22775dc03b74aa5acafbed1e0a67a37b1de3ff34c08437f24ceed67",
+      "checkpoint": "artifacts/pruning/magnitude_70/model.pt",
+      "cpu_batch1": {
+        "p50_ms": 0.0855,
+        "p95_ms": 0.08822055,
+        "repeats": 200,
+        "warmup": 30,
+        "batch_size": 1,
+        "state_dict_bytes": 61210,
+        "backend": "pytorch_cpu",
+        "threads": 4,
+        "p95_round_range_ms": [
+          0.0882143,
+          0.1282707999999999
+        ],
+        "summary": "median across interleaved post-training timing rounds"
+      },
+      "history": [
+        {
+          "epoch": 1,
+          "validation_macro_f1": 0.9530619929446122
+        },
+        {
+          "epoch": 2,
+          "validation_macro_f1": 0.9479346954925272
+        },
+        {
+          "epoch": 3,
+          "validation_macro_f1": 0.9512643688576033
+        },
+        {
+          "epoch": 4,
+          "validation_macro_f1": 0.9498099438288775
+        },
+        {
+          "epoch": 5,
+          "validation_macro_f1": 0.9483220689901438
+        }
+      ],
+      "seconds": 2.358546000003116,
+      "device_batch64": {
+        "cpu": {
+          "device": "cpu",
+          "hardware": "CPU",
+          "torch": "2.2.2",
+          "cuda_runtime": null,
+          "cpu_threads": 4,
+          "dtype": "float32",
+          "rows": 256,
+          "batch_size": 64,
+          "repeats": 50,
+          "warmup": 30,
+          "batch_p50_ms": 1.954479,
+          "batch_p95_ms": 2.1980401,
+          "windows_per_second_at_p50": 32745.299386690775,
+          "timing_scope": "resident-input forward; includes dispatch and synchronization; no transfers",
+          "summary": "median across interleaved post-training timing rounds"
+        },
+        "mps": {
+          "device": "mps",
+          "hardware": "Apple GPU (MPS)",
+          "torch": "2.2.2",
+          "cuda_runtime": null,
+          "cpu_threads": 4,
+          "dtype": "float32",
+          "rows": 256,
+          "batch_size": 64,
+          "repeats": 50,
+          "warmup": 30,
+          "batch_p50_ms": 1.0432295,
+          "batch_p95_ms": 1.1103288,
+          "windows_per_second_at_p50": 61347.95843100679,
+          "timing_scope": "resident-input forward; includes dispatch and synchronization; no transfers",
+          "summary": "median across interleaved post-training timing rounds"
+        }
+      },
+      "test": {
+        "accuracy": 0.8842891075670173,
+        "macro_f1": 0.8831972508693214,
+        "ece_10bin": 0.04392833484404364,
+        "confusion_matrix": [
+          [
+            468,
+            1,
+            27,
+            0,
+            0,
+            0
+          ],
+          [
+            20,
+            416,
+            35,
+            0,
+            0,
+            0
+          ],
+          [
+            19,
+            24,
+            372,
+            4,
+            1,
+            0
+          ],
+          [
+            2,
+            1,
+            0,
+            374,
+            113,
+            1
+          ],
+          [
+            4,
+            0,
+            0,
+            62,
+            466,
+            0
+          ],
+          [
+            0,
+            25,
+            0,
+            0,
+            2,
+            510
+          ]
+        ]
+      },
+      "timing_rounds": [
+        {
+          "cpu_batch1": {
+            "p50_ms": 0.0855,
+            "p95_ms": 0.0882143,
+            "repeats": 200,
+            "warmup": 30,
+            "batch_size": 1,
+            "state_dict_bytes": 61210,
+            "backend": "pytorch_cpu",
+            "threads": 4
+          },
+          "device_batch64": {
+            "cpu": {
+              "device": "cpu",
+              "hardware": "CPU",
+              "torch": "2.2.2",
+              "cuda_runtime": null,
+              "cpu_threads": 4,
+              "dtype": "float32",
+              "rows": 256,
+              "batch_size": 64,
+              "repeats": 50,
+              "warmup": 30,
+              "batch_p50_ms": 1.954479,
+              "batch_p95_ms": 2.1654878,
+              "windows_per_second_at_p50": 32745.299386690775,
+              "timing_scope": "resident-input forward; includes dispatch and synchronization; no transfers"
+            },
+            "mps": {
+              "device": "mps",
+              "hardware": "Apple GPU (MPS)",
+              "torch": "2.2.2",
+              "cuda_runtime": null,
+              "cpu_threads": 4,
+              "dtype": "float32",
+              "rows": 256,
+              "batch_size": 64,
+              "repeats": 50,
+              "warmup": 30,
+              "batch_p50_ms": 1.0432295,
+              "batch_p95_ms": 1.1103288,
+              "windows_per_second_at_p50": 61347.95843100679,
+              "timing_scope": "resident-input forward; includes dispatch and synchronization; no transfers"
+            }
+          }
+        },
+        {
+          "cpu_batch1": {
+            "p50_ms": 0.08527100000000001,
+            "p95_ms": 0.08822055,
+            "repeats": 200,
+            "warmup": 30,
+            "batch_size": 1,
+            "state_dict_bytes": 61210,
+            "backend": "pytorch_cpu",
+            "threads": 4
+          },
+          "device_batch64": {
+            "cpu": {
+              "device": "cpu",
+              "hardware": "CPU",
+              "torch": "2.2.2",
+              "cuda_runtime": null,
+              "cpu_threads": 4,
+              "dtype": "float32",
+              "rows": 256,
+              "batch_size": 64,
+              "repeats": 50,
+              "warmup": 30,
+              "batch_p50_ms": 2.001083,
+              "batch_p95_ms": 2.3159359,
+              "windows_per_second_at_p50": 31982.681378033794,
+              "timing_scope": "resident-input forward; includes dispatch and synchronization; no transfers"
+            },
+            "mps": {
+              "device": "mps",
+              "hardware": "Apple GPU (MPS)",
+              "torch": "2.2.2",
+              "cuda_runtime": null,
+              "cpu_threads": 4,
+              "dtype": "float32",
+              "rows": 256,
+              "batch_size": 64,
+              "repeats": 50,
+              "warmup": 30,
+              "batch_p50_ms": 1.045375,
+              "batch_p95_ms": 1.56948385,
+              "windows_per_second_at_p50": 61222.0495037666,
+              "timing_scope": "resident-input forward; includes dispatch and synchronization; no transfers"
+            }
+          }
+        },
+        {
+          "cpu_batch1": {
+            "p50_ms": 0.085917,
+            "p95_ms": 0.1282707999999999,
+            "repeats": 200,
+            "warmup": 30,
+            "batch_size": 1,
+            "state_dict_bytes": 61210,
+            "backend": "pytorch_cpu",
+            "threads": 4
+          },
+          "device_batch64": {
+            "cpu": {
+              "device": "cpu",
+              "hardware": "CPU",
+              "torch": "2.2.2",
+              "cuda_runtime": null,
+              "cpu_threads": 4,
+              "dtype": "float32",
+              "rows": 256,
+              "batch_size": 64,
+              "repeats": 50,
+              "warmup": 30,
+              "batch_p50_ms": 1.8503335,
+              "batch_p95_ms": 2.1980401,
+              "windows_per_second_at_p50": 34588.35934170786,
+              "timing_scope": "resident-input forward; includes dispatch and synchronization; no transfers"
+            },
+            "mps": {
+              "device": "mps",
+              "hardware": "Apple GPU (MPS)",
+              "torch": "2.2.2",
+              "cuda_runtime": null,
+              "cpu_threads": 4,
+              "dtype": "float32",
+              "rows": 256,
+              "batch_size": 64,
+              "repeats": 50,
+              "warmup": 30,
+              "batch_p50_ms": 1.0411875,
+              "batch_p95_ms": 1.0862123499999998,
+              "windows_per_second_at_p50": 61468.27540668708,
+              "timing_scope": "resident-input forward; includes dispatch and synchronization; no transfers"
+            }
+          }
+        }
+      ]
+    },
+    {
+      "name": "channels_75pct",
+      "details": {
+        "first_channels": [
+          0,
+          2,
+          3,
+          4,
+          6,
+          7,
+          9,
+          10,
+          11,
+          13,
+          15,
+          16,
+          17,
+          18,
+          20,
+          21,
+          22,
+          23
+        ],
+        "second_channels": [
+          2,
+          3,
+          4,
+          7,
+          8,
+          9,
+          10,
+          11,
+          12,
+          13,
+          14,
+          15,
+          16,
+          17,
+          18,
+          19,
+          20,
+          23
+        ],
+        "hidden_units": [
+          0,
+          1,
+          4,
+          5,
+          6,
+          7,
+          8,
+          9,
+          11,
+          12,
+          13,
+          14,
+          15,
+          16,
+          18,
+          19,
+          21,
+          22,
+          23,
+          24,
+          25,
+          26,
+          27,
+          29,
+          30,
+          31,
+          32,
+          34,
+          35,
+          37,
+          38,
+          39,
+          42,
+          43,
+          44,
+          47
+        ],
+        "source_width": 12,
+        "target_width": 9,
+        "ranking": "layerwise output-row L1 magnitude; no test data"
+      },
+      "before_finetuning_validation": {
+        "accuracy": 0.5926193921852387,
+        "macro_f1": 0.5531731708934463,
+        "ece_10bin": 0.2711644258495695,
+        "confusion_matrix": [
+          [
+            70,
+            3,
+            132,
+            16,
+            0,
+            0
+          ],
+          [
+            0,
+            119,
+            71,
+            0,
+            0,
+            0
+          ],
+          [
+            0,
+            0,
+            178,
+            0,
+            0,
+            0
+          ],
+          [
+            0,
+            0,
+            0,
+            227,
+            27,
+            0
+          ],
+          [
+            0,
+            1,
+            0,
+            30,
+            225,
+            0
+          ],
+          [
+            0,
+            0,
+            155,
+            128,
+            0,
+            0
+          ]
+        ]
+      },
+      "validation": {
+        "accuracy": 0.9652677279305355,
+        "macro_f1": 0.96720561898699,
+        "ece_10bin": 0.02072948989405818,
+        "confusion_matrix": [
+          [
+            218,
+            0,
+            3,
+            0,
+            0,
+            0
+          ],
+          [
+            5,
+            185,
+            0,
+            0,
+            0,
+            0
+          ],
+          [
+            0,
+            0,
+            178,
+            0,
+            0,
+            0
+          ],
+          [
+            0,
+            0,
+            0,
+            244,
+            10,
+            0
+          ],
+          [
+            0,
+            0,
+            0,
+            30,
+            226,
+            0
+          ],
+          [
+            0,
+            0,
+            0,
+            0,
+            0,
+            283
+          ]
+        ]
+      },
+      "outage_validation": {
+        "accuracy": 0.9413892908827786,
+        "macro_f1": 0.9406339284217777,
+        "ece_10bin": 0.023366827997560922,
+        "confusion_matrix": [
+          [
+            202,
+            18,
+            1,
+            0,
+            0,
+            0
+          ],
+          [
+            20,
+            170,
+            0,
+            0,
+            0,
+            0
+          ],
+          [
+            0,
+            0,
+            178,
+            0,
+            0,
+            0
+          ],
+          [
+            0,
+            0,
+            0,
+            241,
+            13,
+            0
+          ],
+          [
+            0,
+            0,
+            0,
+            29,
+            227,
+            0
+          ],
+          [
+            0,
+            0,
+            0,
+            0,
+            0,
+            283
+          ]
+        ]
+      },
+      "parameters": 7980,
+      "weight_sparsity": 0.0,
+      "checkpoint_bytes": 38570,
+      "checkpoint_sha256": "247d59ba6a8a293cc481eeee5605d119d371dee577a29bef10786877b60da6fb",
+      "checkpoint": "artifacts/pruning/channels_75pct/model.pt",
+      "cpu_batch1": {
+        "p50_ms": 0.084917,
+        "p95_ms": 0.08725,
+        "repeats": 200,
+        "warmup": 30,
+        "batch_size": 1,
+        "state_dict_bytes": 38554,
+        "backend": "pytorch_cpu",
+        "threads": 4,
+        "p95_round_range_ms": [
+          0.08713539999999999,
+          0.08864584999999998
+        ],
+        "summary": "median across interleaved post-training timing rounds"
+      },
+      "history": [
+        {
+          "epoch": 1,
+          "validation_macro_f1": 0.96720561898699
+        },
+        {
+          "epoch": 2,
+          "validation_macro_f1": 0.9589107597349421
+        },
+        {
+          "epoch": 3,
+          "validation_macro_f1": 0.9631788552655393
+        },
+        {
+          "epoch": 4,
+          "validation_macro_f1": 0.9525568984787695
+        },
+        {
+          "epoch": 5,
+          "validation_macro_f1": 0.9536963712648165
+        }
+      ],
+      "seconds": 1.8707484159967862,
+      "device_batch64": {
+        "cpu": {
+          "device": "cpu",
+          "hardware": "CPU",
+          "torch": "2.2.2",
+          "cuda_runtime": null,
+          "cpu_threads": 4,
+          "dtype": "float32",
+          "rows": 256,
+          "batch_size": 64,
+          "repeats": 50,
+          "warmup": 30,
+          "batch_p50_ms": 1.4155630000000001,
+          "batch_p95_ms": 1.73638125,
+          "windows_per_second_at_p50": 45211.69315671574,
+          "timing_scope": "resident-input forward; includes dispatch and synchronization; no transfers",
+          "summary": "median across interleaved post-training timing rounds"
+        },
+        "mps": {
+          "device": "mps",
+          "hardware": "Apple GPU (MPS)",
+          "torch": "2.2.2",
+          "cuda_runtime": null,
+          "cpu_threads": 4,
+          "dtype": "float32",
+          "rows": 256,
+          "batch_size": 64,
+          "repeats": 50,
+          "warmup": 30,
+          "batch_p50_ms": 1.0303955,
+          "batch_p95_ms": 1.0948856,
+          "windows_per_second_at_p50": 62112.07250031662,
+          "timing_scope": "resident-input forward; includes dispatch and synchronization; no transfers",
+          "summary": "median across interleaved post-training timing rounds"
+        }
+      },
+      "test": {
+        "accuracy": 0.8995588734306074,
+        "macro_f1": 0.8997189381001757,
+        "ece_10bin": 0.04800682200146081,
+        "confusion_matrix": [
+          [
+            492,
+            0,
+            2,
+            2,
+            0,
+            0
+          ],
+          [
+            2,
+            426,
+            42,
+            1,
+            0,
+            0
+          ],
+          [
+            5,
+            1,
+            414,
+            0,
+            0,
+            0
+          ],
+          [
+            1,
+            8,
+            0,
+            347,
+            135,
+            0
+          ],
+          [
+            0,
+            1,
+            0,
+            68,
+            463,
+            0
+          ],
+          [
+            0,
+            27,
+            1,
+            0,
+            0,
+            509
+          ]
+        ]
+      },
+      "timing_rounds": [
+        {
+          "cpu_batch1": {
+            "p50_ms": 0.0845835,
+            "p95_ms": 0.08713539999999999,
+            "repeats": 200,
+            "warmup": 30,
+            "batch_size": 1,
+            "state_dict_bytes": 38554,
+            "backend": "pytorch_cpu",
+            "threads": 4
+          },
+          "device_batch64": {
+            "cpu": {
+              "device": "cpu",
+              "hardware": "CPU",
+              "torch": "2.2.2",
+              "cuda_runtime": null,
+              "cpu_threads": 4,
+              "dtype": "float32",
+              "rows": 256,
+              "batch_size": 64,
+              "repeats": 50,
+              "warmup": 30,
+              "batch_p50_ms": 1.4155630000000001,
+              "batch_p95_ms": 1.75373995,
+              "windows_per_second_at_p50": 45211.69315671574,
+              "timing_scope": "resident-input forward; includes dispatch and synchronization; no transfers"
+            },
+            "mps": {
+              "device": "mps",
+              "hardware": "Apple GPU (MPS)",
+              "torch": "2.2.2",
+              "cuda_runtime": null,
+              "cpu_threads": 4,
+              "dtype": "float32",
+              "rows": 256,
+              "batch_size": 64,
+              "repeats": 50,
+              "warmup": 30,
+              "batch_p50_ms": 1.0390625,
+              "batch_p95_ms": 1.1406184499999998,
+              "windows_per_second_at_p50": 61593.984962406015,
+              "timing_scope": "resident-input forward; includes dispatch and synchronization; no transfers"
+            }
+          }
+        },
+        {
+          "cpu_batch1": {
+            "p50_ms": 0.084917,
+            "p95_ms": 0.08725,
+            "repeats": 200,
+            "warmup": 30,
+            "batch_size": 1,
+            "state_dict_bytes": 38554,
+            "backend": "pytorch_cpu",
+            "threads": 4
+          },
+          "device_batch64": {
+            "cpu": {
+              "device": "cpu",
+              "hardware": "CPU",
+              "torch": "2.2.2",
+              "cuda_runtime": null,
+              "cpu_threads": 4,
+              "dtype": "float32",
+              "rows": 256,
+              "batch_size": 64,
+              "repeats": 50,
+              "warmup": 30,
+              "batch_p50_ms": 1.3744375,
+              "batch_p95_ms": 1.7254787999999999,
+              "windows_per_second_at_p50": 46564.50366058842,
+              "timing_scope": "resident-input forward; includes dispatch and synchronization; no transfers"
+            },
+            "mps": {
+              "device": "mps",
+              "hardware": "Apple GPU (MPS)",
+              "torch": "2.2.2",
+              "cuda_runtime": null,
+              "cpu_threads": 4,
+              "dtype": "float32",
+              "rows": 256,
+              "batch_size": 64,
+              "repeats": 50,
+              "warmup": 30,
+              "batch_p50_ms": 1.024583,
+              "batch_p95_ms": 1.06242485,
+              "windows_per_second_at_p50": 62464.43675134177,
+              "timing_scope": "resident-input forward; includes dispatch and synchronization; no transfers"
+            }
+          }
+        },
+        {
+          "cpu_batch1": {
+            "p50_ms": 0.0850415,
+            "p95_ms": 0.08864584999999998,
+            "repeats": 200,
+            "warmup": 30,
+            "batch_size": 1,
+            "state_dict_bytes": 38554,
+            "backend": "pytorch_cpu",
+            "threads": 4
+          },
+          "device_batch64": {
+            "cpu": {
+              "device": "cpu",
+              "hardware": "CPU",
+              "torch": "2.2.2",
+              "cuda_runtime": null,
+              "cpu_threads": 4,
+              "dtype": "float32",
+              "rows": 256,
+              "batch_size": 64,
+              "repeats": 50,
+              "warmup": 30,
+              "batch_p50_ms": 1.515416,
+              "batch_p95_ms": 1.73638125,
+              "windows_per_second_at_p50": 42232.62787247858,
+              "timing_scope": "resident-input forward; includes dispatch and synchronization; no transfers"
+            },
+            "mps": {
+              "device": "mps",
+              "hardware": "Apple GPU (MPS)",
+              "torch": "2.2.2",
+              "cuda_runtime": null,
+              "cpu_threads": 4,
+              "dtype": "float32",
+              "rows": 256,
+              "batch_size": 64,
+              "repeats": 50,
+              "warmup": 30,
+              "batch_p50_ms": 1.0303955,
+              "batch_p95_ms": 1.0948856,
+              "windows_per_second_at_p50": 62112.07250031662,
+              "timing_scope": "resident-input forward; includes dispatch and synchronization; no transfers"
+            }
+          }
+        }
+      ]
+    },
+    {
+      "name": "channels_50pct",
+      "details": {
+        "first_channels": [
+          0,
+          2,
+          3,
+          7,
+          9,
+          10,
+          11,
+          15,
+          18,
+          20,
+          21,
+          22
+        ],
+        "second_channels": [
+          2,
+          3,
+          4,
+          7,
+          9,
+          11,
+          13,
+          14,
+          15,
+          17,
+          18,
+          23
+        ],
+        "hidden_units": [
+          0,
+          1,
+          5,
+          7,
+          11,
+          13,
+          14,
+          15,
+          16,
+          19,
+          22,
+          23,
+          24,
+          27,
+          29,
+          30,
+          31,
+          32,
+          34,
+          38,
+          39,
+          42,
+          43,
+          47
+        ],
+        "source_width": 12,
+        "target_width": 6,
+        "ranking": "layerwise output-row L1 magnitude; no test data"
+      },
+      "before_finetuning_validation": {
+        "accuracy": 0.40086830680173663,
+        "macro_f1": 0.2901176093377906,
+        "ece_10bin": 0.3402159480558636,
+        "confusion_matrix": [
+          [
+            0,
+            71,
+            0,
+            123,
+            27,
+            0
+          ],
+          [
+            0,
+            190,
+            0,
+            0,
+            0,
+            0
+          ],
+          [
+            0,
+            66,
+            2,
+            110,
+            0,
+            0
+          ],
+          [
+            0,
+            43,
+            0,
+            106,
+            105,
+            0
+          ],
+          [
+            0,
+            0,
+            0,
+            0,
+            256,
+            0
+          ],
+          [
+            0,
+            0,
+            17,
+            266,
+            0,
+            0
+          ]
+        ]
+      },
+      "validation": {
+        "accuracy": 0.9406657018813314,
+        "macro_f1": 0.9450152233987871,
+        "ece_10bin": 0.05191633124686186,
+        "confusion_matrix": [
+          [
+            221,
+            0,
+            0,
+            0,
+            0,
+            0
+          ],
+          [
+            7,
+            181,
+            2,
+            0,
+            0,
+            0
+          ],
+          [
+            0,
+            0,
+            178,
+            0,
+            0,
+            0
+          ],
+          [
+            0,
+            0,
+            0,
+            225,
+            10,
+            19
+          ],
+          [
+            0,
+            0,
+            0,
+            43,
+            213,
+            0
+          ],
+          [
+            0,
+            0,
+            0,
+            1,
+            0,
+            282
+          ]
+        ]
+      },
+      "outage_validation": {
+        "accuracy": 0.914616497829233,
+        "macro_f1": 0.9153649151435163,
+        "ece_10bin": 0.062354361700425104,
+        "confusion_matrix": [
+          [
+            201,
+            15,
+            5,
+            0,
+            0,
+            0
+          ],
+          [
+            24,
+            165,
+            1,
+            0,
+            0,
+            0
+          ],
+          [
+            0,
+            0,
+            178,
+            0,
+            0,
+            0
+          ],
+          [
+            0,
+            0,
+            0,
+            225,
+            10,
+            19
+          ],
+          [
+            0,
+            0,
+            0,
+            43,
+            213,
+            0
+          ],
+          [
+            0,
+            0,
+            0,
+            1,
+            0,
+            282
+          ]
+        ]
+      },
+      "parameters": 3810,
+      "weight_sparsity": 0.0,
+      "checkpoint_bytes": 21290,
+      "checkpoint_sha256": "7a8bb2589c00fbf45bdcd608ee8e20bf68c1c8dff2ba8760e5ba133c347acf90",
+      "checkpoint": "artifacts/pruning/channels_50pct/model.pt",
+      "cpu_batch1": {
+        "p50_ms": 0.08425,
+        "p95_ms": 0.08671634999999998,
+        "repeats": 200,
+        "warmup": 30,
+        "batch_size": 1,
+        "state_dict_bytes": 21402,
+        "backend": "pytorch_cpu",
+        "threads": 4,
+        "p95_round_range_ms": [
+          0.086584,
+          0.08737705
+        ],
+        "summary": "median across interleaved post-training timing rounds"
+      },
+      "history": [
+        {
+          "epoch": 1,
+          "validation_macro_f1": 0.6995001994853635
+        },
+        {
+          "epoch": 2,
+          "validation_macro_f1": 0.899459542236614
+        },
+        {
+          "epoch": 3,
+          "validation_macro_f1": 0.9020229606922747
+        },
+        {
+          "epoch": 4,
+          "validation_macro_f1": 0.9075757102876825
+        },
+        {
+          "epoch": 5,
+          "validation_macro_f1": 0.9450152233987871
+        }
+      ],
+      "seconds": 1.6117126249882858,
+      "device_batch64": {
+        "cpu": {
+          "device": "cpu",
+          "hardware": "CPU",
+          "torch": "2.2.2",
+          "cuda_runtime": null,
+          "cpu_threads": 4,
+          "dtype": "float32",
+          "rows": 256,
+          "batch_size": 64,
+          "repeats": 50,
+          "warmup": 30,
+          "batch_p50_ms": 1.1141874999999999,
+          "batch_p95_ms": 1.3477731,
+          "windows_per_second_at_p50": 57440.96034105571,
+          "timing_scope": "resident-input forward; includes dispatch and synchronization; no transfers",
+          "summary": "median across interleaved post-training timing rounds"
+        },
+        "mps": {
+          "device": "mps",
+          "hardware": "Apple GPU (MPS)",
+          "torch": "2.2.2",
+          "cuda_runtime": null,
+          "cpu_threads": 4,
+          "dtype": "float32",
+          "rows": 256,
+          "batch_size": 64,
+          "repeats": 50,
+          "warmup": 30,
+          "batch_p50_ms": 0.980979,
+          "batch_p95_ms": 1.02564605,
+          "windows_per_second_at_p50": 65240.94807330228,
+          "timing_scope": "resident-input forward; includes dispatch and synchronization; no transfers",
+          "summary": "median across interleaved post-training timing rounds"
+        }
+      },
+      "test": {
+        "accuracy": 0.8951476077366813,
+        "macro_f1": 0.8968648267574838,
+        "ece_10bin": 0.02797447947433207,
+        "confusion_matrix": [
+          [
+            489,
+            1,
+            6,
+            0,
+            0,
+            0
+          ],
+          [
+            4,
+            430,
+            37,
+            0,
+            0,
+            0
+          ],
+          [
+            3,
+            0,
+            417,
+            0,
+            0,
+            0
+          ],
+          [
+            1,
+            3,
+            0,
+            368,
+            118,
+            1
+          ],
+          [
+            0,
+            0,
+            0,
+            92,
+            440,
+            0
+          ],
+          [
+            0,
+            27,
+            0,
+            16,
+            0,
+            494
+          ]
+        ]
+      },
+      "timing_rounds": [
+        {
+          "cpu_batch1": {
+            "p50_ms": 0.084125,
+            "p95_ms": 0.08671634999999998,
+            "repeats": 200,
+            "warmup": 30,
+            "batch_size": 1,
+            "state_dict_bytes": 21402,
+            "backend": "pytorch_cpu",
+            "threads": 4
+          },
+          "device_batch64": {
+            "cpu": {
+              "device": "cpu",
+              "hardware": "CPU",
+              "torch": "2.2.2",
+              "cuda_runtime": null,
+              "cpu_threads": 4,
+              "dtype": "float32",
+              "rows": 256,
+              "batch_size": 64,
+              "repeats": 50,
+              "warmup": 30,
+              "batch_p50_ms": 1.202958,
+              "batch_p95_ms": 1.3477731,
+              "windows_per_second_at_p50": 53202.18993514321,
+              "timing_scope": "resident-input forward; includes dispatch and synchronization; no transfers"
+            },
+            "mps": {
+              "device": "mps",
+              "hardware": "Apple GPU (MPS)",
+              "torch": "2.2.2",
+              "cuda_runtime": null,
+              "cpu_threads": 4,
+              "dtype": "float32",
+              "rows": 256,
+              "batch_size": 64,
+              "repeats": 50,
+              "warmup": 30,
+              "batch_p50_ms": 0.993542,
+              "batch_p95_ms": 1.0405606,
+              "windows_per_second_at_p50": 64415.99851843203,
+              "timing_scope": "resident-input forward; includes dispatch and synchronization; no transfers"
+            }
+          }
+        },
+        {
+          "cpu_batch1": {
+            "p50_ms": 0.08425,
+            "p95_ms": 0.08737705,
+            "repeats": 200,
+            "warmup": 30,
+            "batch_size": 1,
+            "state_dict_bytes": 21402,
+            "backend": "pytorch_cpu",
+            "threads": 4
+          },
+          "device_batch64": {
+            "cpu": {
+              "device": "cpu",
+              "hardware": "CPU",
+              "torch": "2.2.2",
+              "cuda_runtime": null,
+              "cpu_threads": 4,
+              "dtype": "float32",
+              "rows": 256,
+              "batch_size": 64,
+              "repeats": 50,
+              "warmup": 30,
+              "batch_p50_ms": 1.085771,
+              "batch_p95_ms": 1.3560290499999998,
+              "windows_per_second_at_p50": 58944.289357516456,
+              "timing_scope": "resident-input forward; includes dispatch and synchronization; no transfers"
+            },
+            "mps": {
+              "device": "mps",
+              "hardware": "Apple GPU (MPS)",
+              "torch": "2.2.2",
+              "cuda_runtime": null,
+              "cpu_threads": 4,
+              "dtype": "float32",
+              "rows": 256,
+              "batch_size": 64,
+              "repeats": 50,
+              "warmup": 30,
+              "batch_p50_ms": 0.980979,
+              "batch_p95_ms": 1.00998125,
+              "windows_per_second_at_p50": 65240.94807330228,
+              "timing_scope": "resident-input forward; includes dispatch and synchronization; no transfers"
+            }
+          }
+        },
+        {
+          "cpu_batch1": {
+            "p50_ms": 0.084458,
+            "p95_ms": 0.086584,
+            "repeats": 200,
+            "warmup": 30,
+            "batch_size": 1,
+            "state_dict_bytes": 21402,
+            "backend": "pytorch_cpu",
+            "threads": 4
+          },
+          "device_batch64": {
+            "cpu": {
+              "device": "cpu",
+              "hardware": "CPU",
+              "torch": "2.2.2",
+              "cuda_runtime": null,
+              "cpu_threads": 4,
+              "dtype": "float32",
+              "rows": 256,
+              "batch_size": 64,
+              "repeats": 50,
+              "warmup": 30,
+              "batch_p50_ms": 1.1141874999999999,
+              "batch_p95_ms": 1.31310435,
+              "windows_per_second_at_p50": 57440.96034105571,
+              "timing_scope": "resident-input forward; includes dispatch and synchronization; no transfers"
+            },
+            "mps": {
+              "device": "mps",
+              "hardware": "Apple GPU (MPS)",
+              "torch": "2.2.2",
+              "cuda_runtime": null,
+              "cpu_threads": 4,
+              "dtype": "float32",
+              "rows": 256,
+              "batch_size": 64,
+              "repeats": 50,
+              "warmup": 30,
+              "batch_p50_ms": 0.9735205,
+              "batch_p95_ms": 1.02564605,
+              "windows_per_second_at_p50": 65740.78306517428,
+              "timing_scope": "resident-input forward; includes dispatch and synchronization; no transfers"
+            }
+          }
+        }
+      ]
+    }
+  ],
+  "limits": "Single checkpoint/seed; dense kernels; no sparse-runtime acceleration claim.",
+  "selected": "channels_50pct",
+  "minimum_validation_f1": 0.9401672532197752
+}

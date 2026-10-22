@@ -16,9 +16,13 @@ dependencies = [
 local-llm = ["llama-cpp-python==0.3.9"]
 apple = ["coremltools==8.3.0", "setuptools==75.8.2"]
 dev = ["pytest>=8,<9", "ruff>=0.9"]
+notebooks = ["nbformat>=5.10,<6", "nbclient>=0.10,<0.11", "ipykernel>=6,<7", "jupyterlab>=4,<5"]
 
 [project.scripts]
 edge-lab = "edge_agent_lab.cli:main"
+edge-infer = "edge_agent_lab.inference:main"
+edge-prune = "edge_agent_lab.pruning:main"
+edge-quantize = "edge_agent_lab.quantization:main"
 
 [tool.setuptools.packages.find]
 where = ["src"]

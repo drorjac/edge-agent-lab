@@ -1,0 +1,22 @@
+graph():
+    %x : 'torch.Tensor' [num_users=1] = placeholder[target=x]
+    %mean : [num_users=1] = get_attr[target=mean]
+    %sub : [num_users=1] = call_function[target=operator.sub](args = (%x, %mean), kwargs = {})
+    %scale : [num_users=1] = get_attr[target=scale]
+    %truediv : [num_users=1] = call_function[target=operator.truediv](args = (%sub, %scale), kwargs = {})
+    %_scale_0 : [num_users=1] = get_attr[target=_scale_0]
+    %_zero_point_0 : [num_users=1] = get_attr[target=_zero_point_0]
+    %quantize_per_tensor : [num_users=1] = call_function[target=torch.quantize_per_tensor](args = (%truediv, %_scale_0, %_zero_point_0, torch.quint8), kwargs = {})
+    %encoder_0 : [num_users=1] = call_module[target=encoder.0](args = (%quantize_per_tensor,), kwargs = {})
+    %encoder_3 : [num_users=1] = call_module[target=encoder.3](args = (%encoder_0,), kwargs = {})
+    %encoder_6 : [num_users=1] = call_module[target=encoder.6](args = (%encoder_3,), kwargs = {})
+    %dequantize_3 : [num_users=1] = call_method[target=dequantize](args = (%encoder_6,), kwargs = {})
+    %encoder_7 : [num_users=1] = call_module[target=encoder.7](args = (%dequantize_3,), kwargs = {})
+    %encoder_7_scale_0 : [num_users=1] = get_attr[target=encoder_7_scale_0]
+    %encoder_7_zero_point_0 : [num_users=1] = get_attr[target=encoder_7_zero_point_0]
+    %quantize_per_tensor_4 : [num_users=1] = call_function[target=torch.quantize_per_tensor](args = (%encoder_7, %encoder_7_scale_0, %encoder_7_zero_point_0, torch.quint8), kwargs = {})
+    %head_0 : [num_users=1] = call_module[target=head.0](args = (%quantize_per_tensor_4,), kwargs = {})
+    %head_2 : [num_users=1] = call_module[target=head.2](args = (%head_0,), kwargs = {})
+    %head_3 : [num_users=1] = call_module[target=head.3](args = (%head_2,), kwargs = {})
+    %dequantize_7 : [num_users=1] = call_method[target=dequantize](args = (%head_3,), kwargs = {})
+    return dequantize_7
