@@ -12,6 +12,10 @@ The projects share real smartphone accelerometer and gyroscope recordings, a ver
 | [02 · Data Steward](projects/02-data-steward/README.md) | A data engineering agent with retrieval, typed tools, SQLite provenance, and optional local semantic intent routing | Golden task evaluation, retrieval relevance, incident audits, complete tool traces |
 | [03 · Edge Pilot](projects/03-edge-pilot/README.md) | An adaptive planner–runner–critic workflow for constrained model selection and shadow monitoring | Hard deployment gates, Pareto frontier, budget accounting, explicit infeasibility |
 
+## Learn from zero
+
+Start with the [five practical tutorials](notebooks/tutorials/README.md): Python and sensor data, learning and evaluation, model optimization, tool-using agents, and the combined application. Each includes runnable examples, exercises with worked answers, and links to the real implementation. The default path runs locally on CPU without downloads or credentials.
+
 ## Explore the completed study
 
 - [Portfolio summary notebook](notebooks/00_portfolio_summary.ipynb)

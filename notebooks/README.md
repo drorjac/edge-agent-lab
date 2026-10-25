@@ -1,5 +1,7 @@
 # Study notebooks
 
+New to the theory? Begin with the [practical tutorial course](tutorials/README.md), which builds from sensor arrays and a toy classifier to the actual tool and selection APIs. Then return here for the measured study.
+
 Read in this order:
 
 1. [Portfolio summary](00_portfolio_summary.ipynb): how the three projects connect, measured highlights, and evidence limits.
